@@ -39,8 +39,6 @@ public class MainPage extends javax.swing.JFrame {
         jButton3 = new javax.swing.JButton();
         appTitle = new javax.swing.JLabel();
         jLayeredPane1 = new javax.swing.JLayeredPane();
-        areaPanel = new javax.swing.JPanel();
-        jLabel2 = new javax.swing.JLabel();
         volumePanel = new javax.swing.JPanel();
         jLabel4 = new javax.swing.JLabel();
         weightPanel = new javax.swing.JPanel();
@@ -64,6 +62,15 @@ public class MainPage extends javax.swing.JFrame {
         jLabel8 = new javax.swing.JLabel();
         energyPanel = new javax.swing.JPanel();
         jLabel9 = new javax.swing.JLabel();
+        areaPanel = new javax.swing.JPanel();
+        jLabel2 = new javax.swing.JLabel();
+        jLabel13 = new javax.swing.JLabel();
+        jLabel18 = new javax.swing.JLabel();
+        fromArea = new javax.swing.JComboBox<>();
+        toArea = new javax.swing.JComboBox<>();
+        jButton12 = new javax.swing.JButton();
+        jLabel19 = new javax.swing.JLabel();
+        areaInput = new javax.swing.JTextField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
@@ -137,26 +144,6 @@ public class MainPage extends javax.swing.JFrame {
         appTitle.setText("All Units");
 
         jLayeredPane1.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
-
-        jLabel2.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
-        jLabel2.setText("Area Converter");
-
-        javax.swing.GroupLayout areaPanelLayout = new javax.swing.GroupLayout(areaPanel);
-        areaPanel.setLayout(areaPanelLayout);
-        areaPanelLayout.setHorizontalGroup(
-            areaPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(areaPanelLayout.createSequentialGroup()
-                .addGap(202, 202, 202)
-                .addComponent(jLabel2)
-                .addContainerGap(202, Short.MAX_VALUE))
-        );
-        areaPanelLayout.setVerticalGroup(
-            areaPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(areaPanelLayout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jLabel2)
-                .addContainerGap(191, Short.MAX_VALUE))
-        );
 
         jLabel4.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         jLabel4.setText("Volume Converter");
@@ -364,17 +351,92 @@ public class MainPage extends javax.swing.JFrame {
             .addGroup(energyPanelLayout.createSequentialGroup()
                 .addGap(191, 191, 191)
                 .addComponent(jLabel9)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(202, Short.MAX_VALUE))
         );
         energyPanelLayout.setVerticalGroup(
             energyPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(energyPanelLayout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(jLabel9)
-                .addContainerGap(191, Short.MAX_VALUE))
+                .addContainerGap(227, Short.MAX_VALUE))
         );
 
-        jLayeredPane1.setLayer(areaPanel, javax.swing.JLayeredPane.DEFAULT_LAYER);
+        jLabel2.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        jLabel2.setText("Area Converter");
+
+        jLabel13.setText("Convert From");
+
+        jLabel18.setText("Convert To");
+
+        fromArea.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Square Meters", "Square Centimeters", "Square Millimeters", "Square Feet", "Square Inches", "Square Yards" }));
+        fromArea.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                fromAreaActionPerformed(evt);
+            }
+        });
+
+        toArea.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Square Meters", "Square Centimeters", "Square Millimeters", "Square Feet", "Square Inches", "Square Yards" }));
+
+        jButton12.setText("Convert");
+        jButton12.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton12ActionPerformed(evt);
+            }
+        });
+
+        jLabel19.setText("Enter the Area");
+
+        javax.swing.GroupLayout areaPanelLayout = new javax.swing.GroupLayout(areaPanel);
+        areaPanel.setLayout(areaPanelLayout);
+        areaPanelLayout.setHorizontalGroup(
+            areaPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(areaPanelLayout.createSequentialGroup()
+                .addGroup(areaPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(areaPanelLayout.createSequentialGroup()
+                        .addGap(194, 194, 194)
+                        .addComponent(jLabel2))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, areaPanelLayout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(jButton12, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(areaPanelLayout.createSequentialGroup()
+                        .addGap(100, 100, 100)
+                        .addGroup(areaPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addGroup(areaPanelLayout.createSequentialGroup()
+                                .addComponent(jLabel18)
+                                .addGap(112, 112, 112)
+                                .addComponent(toArea, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, areaPanelLayout.createSequentialGroup()
+                                .addGroup(areaPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(jLabel13)
+                                    .addComponent(jLabel19))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addGroup(areaPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                    .addComponent(fromArea, 0, 150, Short.MAX_VALUE)
+                                    .addComponent(areaInput))))))
+                .addContainerGap(135, Short.MAX_VALUE))
+        );
+        areaPanelLayout.setVerticalGroup(
+            areaPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(areaPanelLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jLabel2)
+                .addGap(30, 30, 30)
+                .addGroup(areaPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel19)
+                    .addComponent(areaInput, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addGroup(areaPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel13)
+                    .addComponent(fromArea, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addGroup(areaPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(toArea, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel18))
+                .addGap(18, 18, 18)
+                .addComponent(jButton12, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(43, Short.MAX_VALUE))
+        );
+
         jLayeredPane1.setLayer(volumePanel, javax.swing.JLayeredPane.DEFAULT_LAYER);
         jLayeredPane1.setLayer(weightPanel, javax.swing.JLayeredPane.DEFAULT_LAYER);
         jLayeredPane1.setLayer(lengthPanel, javax.swing.JLayeredPane.DEFAULT_LAYER);
@@ -383,14 +445,13 @@ public class MainPage extends javax.swing.JFrame {
         jLayeredPane1.setLayer(temperaturePanel, javax.swing.JLayeredPane.DEFAULT_LAYER);
         jLayeredPane1.setLayer(densityPanel, javax.swing.JLayeredPane.DEFAULT_LAYER);
         jLayeredPane1.setLayer(energyPanel, javax.swing.JLayeredPane.DEFAULT_LAYER);
+        jLayeredPane1.setLayer(areaPanel, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         javax.swing.GroupLayout jLayeredPane1Layout = new javax.swing.GroupLayout(jLayeredPane1);
         jLayeredPane1.setLayout(jLayeredPane1Layout);
         jLayeredPane1Layout.setHorizontalGroup(
             jLayeredPane1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(energyPanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-            .addGroup(jLayeredPane1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addComponent(areaPanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addGroup(jLayeredPane1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addComponent(volumePanel, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addGroup(jLayeredPane1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -405,12 +466,12 @@ public class MainPage extends javax.swing.JFrame {
                 .addComponent(temperaturePanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addGroup(jLayeredPane1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addComponent(densityPanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addGroup(jLayeredPane1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addComponent(areaPanel, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jLayeredPane1Layout.setVerticalGroup(
             jLayeredPane1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(energyPanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-            .addGroup(jLayeredPane1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addComponent(areaPanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addGroup(jLayeredPane1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addComponent(volumePanel, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addGroup(jLayeredPane1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -425,6 +486,8 @@ public class MainPage extends javax.swing.JFrame {
                 .addComponent(temperaturePanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addGroup(jLayeredPane1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addComponent(densityPanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addGroup(jLayeredPane1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addComponent(areaPanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
@@ -621,152 +684,159 @@ public class MainPage extends javax.swing.JFrame {
     }//GEN-LAST:event_fromLengthActionPerformed
 
     private void jButton10ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton10ActionPerformed
-         try{
-            //Converting Meters
-            Double convertedLength;
-            Double inputLength=Double.parseDouble(lengthInput.getText());
-            if(fromLength.getSelectedItem().toString()=="Meters" && toLength.getSelectedItem().toString()=="Feet"){
-            convertedLength=inputLength*3.28084;
-            JOptionPane.showMessageDialog(this, "The Length in Feet is "+convertedLength.toString());
+
+    }//GEN-LAST:event_jButton10ActionPerformed
+
+    private void fromAreaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_fromAreaActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_fromAreaActionPerformed
+
+    private void jButton12ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton12ActionPerformed
+        try{
+            //Converting Square Meters
+            Double convertedArea;
+            Double inputLength=Double.parseDouble(areaInput.getText());
+            if(fromArea.getSelectedItem().toString()=="Square Meters" && toArea.getSelectedItem().toString()=="Square Feet"){
+            convertedArea=inputLength*10.764;
+            JOptionPane.showMessageDialog(this, "The Length in Square Feet is "+convertedArea.toString());
         }
-            else if(fromLength.getSelectedItem().toString()=="Meters" && toLength.getSelectedItem().toString()=="Inches"){
-            convertedLength=inputLength*39.37;
-            JOptionPane.showMessageDialog(this, "The Length in Inches is "+convertedLength.toString());
+            else if(fromArea.getSelectedItem().toString()=="Square Meters" && toArea.getSelectedItem().toString()=="Square Inches"){
+            convertedArea=inputLength*1550;
+            JOptionPane.showMessageDialog(this, "The Length in Square Inches is "+convertedArea.toString());
         }
-            else if(fromLength.getSelectedItem().toString()=="Meters" && toLength.getSelectedItem().toString()=="Centimeters"){
-            convertedLength=inputLength*100;
-            JOptionPane.showMessageDialog(this, "The Length in Centimeters is "+convertedLength.toString());
+            else if(fromArea.getSelectedItem().toString()=="Square Meters" && toArea.getSelectedItem().toString()=="Square Centimeters"){
+            convertedArea=inputLength*10000;
+            JOptionPane.showMessageDialog(this, "The Length in Square Centimeters is "+convertedArea.toString());
         }
-            else if(fromLength.getSelectedItem().toString()=="Meters" && toLength.getSelectedItem().toString()=="Millimeters"){
-            convertedLength=inputLength*1000;
-            JOptionPane.showMessageDialog(this, "The Length in Millimeters is "+convertedLength.toString());
+            else if(fromArea.getSelectedItem().toString()=="Square Meters" && toArea.getSelectedItem().toString()=="Square Millimeters"){
+            convertedArea=inputLength*1000000;
+            JOptionPane.showMessageDialog(this, "The Length in Square Millimeters is "+convertedArea.toString());
         }
-            else if(fromLength.getSelectedItem().toString()=="Meters" && toLength.getSelectedItem().toString()=="Yards"){
-            convertedLength=inputLength*1.094;
-            JOptionPane.showMessageDialog(this, "The Length in Yards is "+convertedLength.toString());
-        }
-            
-            //Converting Feet
-            else if(fromLength.getSelectedItem().toString()=="Feet" && toLength.getSelectedItem().toString()=="Meters"){
-            convertedLength=inputLength/3.28084;
-            JOptionPane.showMessageDialog(this, "The Length in Meters is "+convertedLength.toString());
-        }
-            else if(fromLength.getSelectedItem().toString()=="Feet" && toLength.getSelectedItem().toString()=="Inches"){
-            convertedLength=inputLength*12;
-            JOptionPane.showMessageDialog(this, "The Length in Inches is "+convertedLength.toString());
-        }
-            else if(fromLength.getSelectedItem().toString()=="Feet" && toLength.getSelectedItem().toString()=="Centimeters"){
-            convertedLength=inputLength*30.48;
-            JOptionPane.showMessageDialog(this, "The Length in Centimeters is "+convertedLength.toString());
-        }
-            else if(fromLength.getSelectedItem().toString()=="Feet" && toLength.getSelectedItem().toString()=="Millimeters"){
-            convertedLength=inputLength*305;
-            JOptionPane.showMessageDialog(this, "The Length in Millimeters is "+convertedLength.toString());
-        }
-            else if(fromLength.getSelectedItem().toString()=="Feet" && toLength.getSelectedItem().toString()=="Yards"){
-            convertedLength=inputLength/3;
-            JOptionPane.showMessageDialog(this, "The Length in Yards is "+convertedLength.toString());
+            else if(fromArea.getSelectedItem().toString()=="Square Meters" && toArea.getSelectedItem().toString()=="Square Yards"){
+            convertedArea=inputLength*1.196;
+            JOptionPane.showMessageDialog(this, "The Length in Square Yards is "+convertedArea.toString());
         }
             
-            
-            //Converting Inches
-            else if(fromLength.getSelectedItem().toString()=="Inches" && toLength.getSelectedItem().toString()=="Meters"){
-            convertedLength=inputLength/39.37;
-            JOptionPane.showMessageDialog(this, "The Length in Meters is "+convertedLength.toString());
+            //Converting Square Feet
+            else if(fromArea.getSelectedItem().toString()=="Square Feet" && toArea.getSelectedItem().toString()=="Square Meters"){
+            convertedArea=inputLength/10.764;
+            JOptionPane.showMessageDialog(this, "The Length in Square Meters is "+convertedArea.toString());
         }
-            else if(fromLength.getSelectedItem().toString()=="Inches" && toLength.getSelectedItem().toString()=="Feet"){
-            convertedLength=inputLength/12;
-            JOptionPane.showMessageDialog(this, "The Length in Feet is "+convertedLength.toString());
+            else if(fromArea.getSelectedItem().toString()=="Square Feet" && toArea.getSelectedItem().toString()=="Square Inches"){
+            convertedArea=inputLength*144;
+            JOptionPane.showMessageDialog(this, "The Length in Square Inches is "+convertedArea.toString());
         }
-            else if(fromLength.getSelectedItem().toString()=="Inches" && toLength.getSelectedItem().toString()=="Centimeters"){
-            convertedLength=inputLength*2.54;
-            JOptionPane.showMessageDialog(this, "The Length in Centimeters is "+convertedLength.toString());
+            else if(fromArea.getSelectedItem().toString()=="Square Feet" && toArea.getSelectedItem().toString()=="Square Centimeters"){
+            convertedArea=inputLength*929;
+            JOptionPane.showMessageDialog(this, "The Length in Square Centimeters is "+convertedArea.toString());
         }
-            else if(fromLength.getSelectedItem().toString()=="Inches" && toLength.getSelectedItem().toString()=="Millimeters"){
-            convertedLength=inputLength*25.4;
-            JOptionPane.showMessageDialog(this, "The Length in Millimeters is "+convertedLength.toString());
+            else if(fromArea.getSelectedItem().toString()=="Square Feet" && toArea.getSelectedItem().toString()=="Square Millimeters"){
+            convertedArea=inputLength*92903;
+            JOptionPane.showMessageDialog(this, "The Length in Square Millimeters is "+convertedArea.toString());
         }
-            else if(fromLength.getSelectedItem().toString()=="Inches" && toLength.getSelectedItem().toString()=="Yards"){
-            convertedLength=inputLength/36;
-            JOptionPane.showMessageDialog(this, "The Length in Yards is "+convertedLength.toString());
+            else if(fromArea.getSelectedItem().toString()=="Square Feet" && toArea.getSelectedItem().toString()=="Square Yards"){
+            convertedArea=inputLength/9;
+            JOptionPane.showMessageDialog(this, "The Length in Square Yards is "+convertedArea.toString());
         }
             
             
-            //Converting Centimeters
-            else if(fromLength.getSelectedItem().toString()=="Centimeters" && toLength.getSelectedItem().toString()=="Meters"){
-            convertedLength=inputLength/100;
-            JOptionPane.showMessageDialog(this, "The Length in Meters is "+convertedLength.toString());
+            //Converting Square Inches
+            else if(fromArea.getSelectedItem().toString()=="Square Inches" && toArea.getSelectedItem().toString()=="Square Meters"){
+            convertedArea=inputLength/1550;
+            JOptionPane.showMessageDialog(this, "The Length in Square Meters is "+convertedArea.toString());
         }
-            else if(fromLength.getSelectedItem().toString()=="Centimeters" && toLength.getSelectedItem().toString()=="Feet"){
-            convertedLength=inputLength/30.48;
-            JOptionPane.showMessageDialog(this, "The Length in Feet is "+convertedLength.toString());
+            else if(fromArea.getSelectedItem().toString()=="Square Inches" && toArea.getSelectedItem().toString()=="Square Feet"){
+            convertedArea=inputLength/144;
+            JOptionPane.showMessageDialog(this, "The Length in Square Feet is "+convertedArea.toString());
         }
-            else if(fromLength.getSelectedItem().toString()=="Centimeters" && toLength.getSelectedItem().toString()=="Inches"){
-            convertedLength=inputLength/2.54;
-            JOptionPane.showMessageDialog(this, "The Length in Inches is "+convertedLength.toString());
+            else if(fromArea.getSelectedItem().toString()=="Square Inches" && toArea.getSelectedItem().toString()=="Square Centimeters"){
+            convertedArea=inputLength*6.452;
+            JOptionPane.showMessageDialog(this, "The Length in Square Centimeters is "+convertedArea.toString());
         }
-            else if(fromLength.getSelectedItem().toString()=="Centimeters" && toLength.getSelectedItem().toString()=="Millimeters"){
-            convertedLength=inputLength*10;
-            JOptionPane.showMessageDialog(this, "The Length in Millimeters is "+convertedLength.toString());
+            else if(fromArea.getSelectedItem().toString()=="Square Inches" && toArea.getSelectedItem().toString()=="Square Millimeters"){
+            convertedArea=inputLength*645;
+            JOptionPane.showMessageDialog(this, "The Length in Square Millimeters is "+convertedArea.toString());
         }
-            else if(fromLength.getSelectedItem().toString()=="Centimeters" && toLength.getSelectedItem().toString()=="Yards"){
-            convertedLength=inputLength/91.44;
-            JOptionPane.showMessageDialog(this, "The Length in Yards is "+convertedLength.toString());
-        }
-            
-            
-            //Converting Millimeters
-            else if(fromLength.getSelectedItem().toString()=="Millimeters" && toLength.getSelectedItem().toString()=="Meters"){
-            convertedLength=inputLength/1000;
-            JOptionPane.showMessageDialog(this, "The Length in Meters is "+convertedLength.toString());
-        }
-            else if(fromLength.getSelectedItem().toString()=="Millimeters" && toLength.getSelectedItem().toString()=="Centimeters"){
-            convertedLength=inputLength*100;
-            JOptionPane.showMessageDialog(this, "The Length in Centimeters is "+convertedLength.toString());
-        }
-            else if(fromLength.getSelectedItem().toString()=="Millimeters" && toLength.getSelectedItem().toString()=="Inches"){
-            convertedLength=inputLength/25.4;
-            JOptionPane.showMessageDialog(this, "The Length in Inches is "+convertedLength.toString());
-        }
-            else if(fromLength.getSelectedItem().toString()=="Millimeters" && toLength.getSelectedItem().toString()=="Feet"){
-            convertedLength=inputLength/305;
-            JOptionPane.showMessageDialog(this, "The Length in Feet is "+convertedLength.toString());
-        }
-            else if(fromLength.getSelectedItem().toString()=="Millimeters" && toLength.getSelectedItem().toString()=="Yards"){
-            convertedLength=inputLength/914;
-            JOptionPane.showMessageDialog(this, "The Length in Yards is "+convertedLength.toString());
-        }
-            
-            //Converting Yards
-            else if(fromLength.getSelectedItem().toString()=="Yards" && toLength.getSelectedItem().toString()=="Meters"){
-            convertedLength=inputLength/1.094;
-            JOptionPane.showMessageDialog(this, "The Length in Meters is "+convertedLength.toString());
-        }
-            else if(fromLength.getSelectedItem().toString()=="Yards" && toLength.getSelectedItem().toString()=="Centimeters"){
-            convertedLength=inputLength*91.44;
-            JOptionPane.showMessageDialog(this, "The Length in Centimeters is "+convertedLength.toString());
-        }
-            else if(fromLength.getSelectedItem().toString()=="Yards" && toLength.getSelectedItem().toString()=="Inches"){
-            convertedLength=inputLength*36;
-            JOptionPane.showMessageDialog(this, "The Length in Inches is "+convertedLength.toString());
-        }
-            else if(fromLength.getSelectedItem().toString()=="Yards" && toLength.getSelectedItem().toString()=="Feet"){
-            convertedLength=inputLength*3;
-            JOptionPane.showMessageDialog(this, "The Length in Feet is "+convertedLength.toString());
-        }
-            else if(fromLength.getSelectedItem().toString()=="Yards" && toLength.getSelectedItem().toString()=="Millimeters"){
-            convertedLength=inputLength*914;
-            JOptionPane.showMessageDialog(this, "The Length in Millimeters is "+convertedLength.toString());
+            else if(fromArea.getSelectedItem().toString()=="Square Inches" && toArea.getSelectedItem().toString()=="Square Yards"){
+            convertedArea=inputLength/1296;
+            JOptionPane.showMessageDialog(this, "The Length in Square Yards is "+convertedArea.toString());
         }
             
             
-            else if(fromLength.getSelectedItem().toString()==toLength.getSelectedItem().toString()){
+            //Converting Square Centimeters
+            else if(fromArea.getSelectedItem().toString()=="Square Centimeters" && toArea.getSelectedItem().toString()=="Square Meters"){
+            convertedArea=inputLength/10000;
+            JOptionPane.showMessageDialog(this, "The Length in Square Meters is "+convertedArea.toString());
+        }
+            else if(fromArea.getSelectedItem().toString()=="Square Centimeters" && toArea.getSelectedItem().toString()=="Square Feet"){
+            convertedArea=inputLength/929;
+            JOptionPane.showMessageDialog(this, "The Length in Square Feet is "+convertedArea.toString());
+        }
+            else if(fromArea.getSelectedItem().toString()=="Square Centimeters" && toArea.getSelectedItem().toString()=="Square Inches"){
+            convertedArea=inputLength/6.452;
+            JOptionPane.showMessageDialog(this, "The Length in Square Inches is "+convertedArea.toString());
+        }
+            else if(fromArea.getSelectedItem().toString()=="Square Centimeters" && toArea.getSelectedItem().toString()=="Square Millimeters"){
+            convertedArea=inputLength*100;
+            JOptionPane.showMessageDialog(this, "The Length in Square Millimeters is "+convertedArea.toString());
+        }
+            else if(fromArea.getSelectedItem().toString()=="Square Centimeters" && toArea.getSelectedItem().toString()=="Square Yards"){
+            convertedArea=inputLength/8361;
+            JOptionPane.showMessageDialog(this, "The Length in Square Yards is "+convertedArea.toString());
+        }
+            
+            
+            //Converting Square Millimeters
+            else if(fromArea.getSelectedItem().toString()=="Square Millimeters" && toArea.getSelectedItem().toString()=="Square Meters"){
+            convertedArea=inputLength/1000000;
+            JOptionPane.showMessageDialog(this, "The Length in Square Meters is "+convertedArea.toString());
+        }
+            else if(fromArea.getSelectedItem().toString()=="Square Millimeters" && toArea.getSelectedItem().toString()=="Square Centimeters"){
+            convertedArea=inputLength/100;
+            JOptionPane.showMessageDialog(this, "The Length in Square Centimeters is "+convertedArea.toString());
+        }
+            else if(fromArea.getSelectedItem().toString()=="Square Millimeters" && toArea.getSelectedItem().toString()=="Square Inches"){
+            convertedArea=inputLength/645;
+            JOptionPane.showMessageDialog(this, "The Length in Square Inches is "+convertedArea.toString());
+        }
+            else if(fromArea.getSelectedItem().toString()=="Square Millimeters" && toArea.getSelectedItem().toString()=="Square Feet"){
+            convertedArea=inputLength/92903;
+            JOptionPane.showMessageDialog(this, "The Length in Square Feet is "+convertedArea.toString());
+        }
+            else if(fromArea.getSelectedItem().toString()=="Square Millimeters" && toArea.getSelectedItem().toString()=="Square Yards"){
+            convertedArea=inputLength/836127;
+            JOptionPane.showMessageDialog(this, "The Length in Square Yards is "+convertedArea.toString());
+        }
+            
+            //Converting Square Yards
+            else if(fromArea.getSelectedItem().toString()=="Square Yards" && toArea.getSelectedItem().toString()=="Square Meters"){
+            convertedArea=inputLength/1.196;
+            JOptionPane.showMessageDialog(this, "The Length in Square Meters is "+convertedArea.toString());
+        }
+            else if(fromArea.getSelectedItem().toString()=="Square Yards" && toArea.getSelectedItem().toString()=="Square Centimeters"){
+            convertedArea=inputLength*8361;
+            JOptionPane.showMessageDialog(this, "The Length in Square Centimeters is "+convertedArea.toString());
+        }
+            else if(fromArea.getSelectedItem().toString()=="Square Yards" && toArea.getSelectedItem().toString()=="Square Inches"){
+            convertedArea=inputLength*1296;
+            JOptionPane.showMessageDialog(this, "The Length in Square Inches is "+convertedArea.toString());
+        }
+            else if(fromArea.getSelectedItem().toString()=="Square Yards" && toArea.getSelectedItem().toString()=="Square Feet"){
+            convertedArea=inputLength*9;
+            JOptionPane.showMessageDialog(this, "The Length in Square Feet is "+convertedArea.toString());
+        }
+            else if(fromArea.getSelectedItem().toString()=="Square Yards" && toArea.getSelectedItem().toString()=="Square Millimeters"){
+            convertedArea=inputLength*836127;
+            JOptionPane.showMessageDialog(this, "The Length in Square Millimeters is "+convertedArea.toString());
+        }
+            
+            
+            else if(fromArea.getSelectedItem().toString()==toArea.getSelectedItem().toString()){
             JOptionPane.showMessageDialog(this, "Same units selected");
         }
     }
     catch(java.lang.NumberFormatException e){JOptionPane.showMessageDialog(this,"Only Numerical Input is Allowed");}
-    
-    }//GEN-LAST:event_jButton10ActionPerformed
+    }//GEN-LAST:event_jButton12ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -805,13 +875,16 @@ public class MainPage extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel appTitle;
+    private javax.swing.JTextField areaInput;
     private javax.swing.JPanel areaPanel;
     private javax.swing.JPanel densityPanel;
     private javax.swing.JPanel energyPanel;
     private javax.swing.JPanel forcePanel;
+    private javax.swing.JComboBox<String> fromArea;
     private javax.swing.JComboBox<String> fromLength;
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton10;
+    private javax.swing.JButton jButton12;
     private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;
     private javax.swing.JButton jButton4;
@@ -824,6 +897,9 @@ public class MainPage extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
     private javax.swing.JLabel jLabel12;
+    private javax.swing.JLabel jLabel13;
+    private javax.swing.JLabel jLabel18;
+    private javax.swing.JLabel jLabel19;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
@@ -838,6 +914,7 @@ public class MainPage extends javax.swing.JFrame {
     private javax.swing.JPanel lengthPanel;
     private javax.swing.JPanel speedPanel;
     private javax.swing.JPanel temperaturePanel;
+    private javax.swing.JComboBox<String> toArea;
     private javax.swing.JComboBox<String> toLength;
     private javax.swing.JPanel volumePanel;
     private javax.swing.JPanel weightPanel;
