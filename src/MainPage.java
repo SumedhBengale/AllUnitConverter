@@ -39,21 +39,15 @@ public class MainPage extends javax.swing.JFrame {
         jButton3 = new javax.swing.JButton();
         appTitle = new javax.swing.JLabel();
         jLayeredPane1 = new javax.swing.JLayeredPane();
-        volumePanel = new javax.swing.JPanel();
-        jLabel4 = new javax.swing.JLabel();
-        weightPanel = new javax.swing.JPanel();
-        jLabel3 = new javax.swing.JLabel();
         lengthPanel = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
         jLabel10 = new javax.swing.JLabel();
         jLabel11 = new javax.swing.JLabel();
         fromLength = new javax.swing.JComboBox<>();
         toLength = new javax.swing.JComboBox<>();
-        jButton10 = new javax.swing.JButton();
+        convertLength = new javax.swing.JButton();
         jLabel12 = new javax.swing.JLabel();
         lengthInput = new javax.swing.JTextField();
-        speedPanel = new javax.swing.JPanel();
-        jLabel5 = new javax.swing.JLabel();
         forcePanel = new javax.swing.JPanel();
         jLabel6 = new javax.swing.JLabel();
         temperaturePanel = new javax.swing.JPanel();
@@ -68,9 +62,36 @@ public class MainPage extends javax.swing.JFrame {
         jLabel18 = new javax.swing.JLabel();
         fromArea = new javax.swing.JComboBox<>();
         toArea = new javax.swing.JComboBox<>();
-        jButton12 = new javax.swing.JButton();
+        convertArea = new javax.swing.JButton();
         jLabel19 = new javax.swing.JLabel();
         areaInput = new javax.swing.JTextField();
+        weightPanel = new javax.swing.JPanel();
+        jLabel14 = new javax.swing.JLabel();
+        jLabel15 = new javax.swing.JLabel();
+        jLabel16 = new javax.swing.JLabel();
+        fromWeight = new javax.swing.JComboBox<>();
+        toWeight = new javax.swing.JComboBox<>();
+        convertWeight = new javax.swing.JButton();
+        jLabel17 = new javax.swing.JLabel();
+        weightInput = new javax.swing.JTextField();
+        speedPanel = new javax.swing.JPanel();
+        jLabel3 = new javax.swing.JLabel();
+        jLabel20 = new javax.swing.JLabel();
+        jLabel21 = new javax.swing.JLabel();
+        fromSpeed = new javax.swing.JComboBox<>();
+        toSpeed = new javax.swing.JComboBox<>();
+        convertSpeed = new javax.swing.JButton();
+        jLabel22 = new javax.swing.JLabel();
+        speedInput = new javax.swing.JTextField();
+        volumePanel = new javax.swing.JPanel();
+        jLabel5 = new javax.swing.JLabel();
+        jLabel23 = new javax.swing.JLabel();
+        jLabel24 = new javax.swing.JLabel();
+        fromVolume = new javax.swing.JComboBox<>();
+        toVolume = new javax.swing.JComboBox<>();
+        convertVolume = new javax.swing.JButton();
+        jLabel25 = new javax.swing.JLabel();
+        volumeInput = new javax.swing.JTextField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
@@ -145,46 +166,6 @@ public class MainPage extends javax.swing.JFrame {
 
         jLayeredPane1.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
 
-        jLabel4.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
-        jLabel4.setText("Volume Converter");
-
-        javax.swing.GroupLayout volumePanelLayout = new javax.swing.GroupLayout(volumePanel);
-        volumePanel.setLayout(volumePanelLayout);
-        volumePanelLayout.setHorizontalGroup(
-            volumePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(volumePanelLayout.createSequentialGroup()
-                .addGap(189, 189, 189)
-                .addComponent(jLabel4)
-                .addContainerGap(189, Short.MAX_VALUE))
-        );
-        volumePanelLayout.setVerticalGroup(
-            volumePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(volumePanelLayout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jLabel4)
-                .addContainerGap(191, Short.MAX_VALUE))
-        );
-
-        jLabel3.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
-        jLabel3.setText("Weight Converter");
-
-        javax.swing.GroupLayout weightPanelLayout = new javax.swing.GroupLayout(weightPanel);
-        weightPanel.setLayout(weightPanelLayout);
-        weightPanelLayout.setHorizontalGroup(
-            weightPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(weightPanelLayout.createSequentialGroup()
-                .addGap(191, 191, 191)
-                .addComponent(jLabel3)
-                .addContainerGap(190, Short.MAX_VALUE))
-        );
-        weightPanelLayout.setVerticalGroup(
-            weightPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(weightPanelLayout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jLabel3)
-                .addContainerGap(191, Short.MAX_VALUE))
-        );
-
         jLabel1.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         jLabel1.setText("Length Converter");
 
@@ -201,10 +182,10 @@ public class MainPage extends javax.swing.JFrame {
 
         toLength.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Meters", "Centimeters", "Millimeters", "Feet", "Inches", "Yards" }));
 
-        jButton10.setText("Convert");
-        jButton10.addActionListener(new java.awt.event.ActionListener() {
+        convertLength.setText("Convert");
+        convertLength.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton10ActionPerformed(evt);
+                convertLengthActionPerformed(evt);
             }
         });
 
@@ -221,7 +202,7 @@ public class MainPage extends javax.swing.JFrame {
                         .addComponent(jLabel1))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, lengthPanelLayout.createSequentialGroup()
                         .addContainerGap()
-                        .addComponent(jButton10, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(convertLength, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(lengthPanelLayout.createSequentialGroup()
                         .addGap(100, 100, 100)
                         .addGroup(lengthPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
@@ -257,28 +238,8 @@ public class MainPage extends javax.swing.JFrame {
                     .addComponent(toLength, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel11))
                 .addGap(18, 18, 18)
-                .addComponent(jButton10, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(convertLength, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-        );
-
-        jLabel5.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
-        jLabel5.setText("Speed Converter");
-
-        javax.swing.GroupLayout speedPanelLayout = new javax.swing.GroupLayout(speedPanel);
-        speedPanel.setLayout(speedPanelLayout);
-        speedPanelLayout.setHorizontalGroup(
-            speedPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(speedPanelLayout.createSequentialGroup()
-                .addGap(196, 196, 196)
-                .addComponent(jLabel5)
-                .addContainerGap(195, Short.MAX_VALUE))
-        );
-        speedPanelLayout.setVerticalGroup(
-            speedPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(speedPanelLayout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jLabel5)
-                .addContainerGap(191, Short.MAX_VALUE))
         );
 
         jLabel6.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
@@ -351,7 +312,7 @@ public class MainPage extends javax.swing.JFrame {
             .addGroup(energyPanelLayout.createSequentialGroup()
                 .addGap(191, 191, 191)
                 .addComponent(jLabel9)
-                .addContainerGap(202, Short.MAX_VALUE))
+                .addContainerGap(212, Short.MAX_VALUE))
         );
         energyPanelLayout.setVerticalGroup(
             energyPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -377,10 +338,10 @@ public class MainPage extends javax.swing.JFrame {
 
         toArea.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Square Meters", "Square Centimeters", "Square Millimeters", "Square Feet", "Square Inches", "Square Yards" }));
 
-        jButton12.setText("Convert");
-        jButton12.addActionListener(new java.awt.event.ActionListener() {
+        convertArea.setText("Convert");
+        convertArea.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton12ActionPerformed(evt);
+                convertAreaActionPerformed(evt);
             }
         });
 
@@ -397,7 +358,7 @@ public class MainPage extends javax.swing.JFrame {
                         .addComponent(jLabel2))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, areaPanelLayout.createSequentialGroup()
                         .addContainerGap()
-                        .addComponent(jButton12, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(convertArea, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(areaPanelLayout.createSequentialGroup()
                         .addGap(100, 100, 100)
                         .addGroup(areaPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
@@ -433,19 +394,247 @@ public class MainPage extends javax.swing.JFrame {
                     .addComponent(toArea, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel18))
                 .addGap(18, 18, 18)
-                .addComponent(jButton12, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(convertArea, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(43, Short.MAX_VALUE))
         );
 
-        jLayeredPane1.setLayer(volumePanel, javax.swing.JLayeredPane.DEFAULT_LAYER);
-        jLayeredPane1.setLayer(weightPanel, javax.swing.JLayeredPane.DEFAULT_LAYER);
+        jLabel14.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        jLabel14.setText("Weight Converter");
+
+        jLabel15.setText("Convert From");
+
+        jLabel16.setText("Convert To");
+
+        fromWeight.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Kilograms", "Grams", "Pounds", "Ounces" }));
+        fromWeight.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                fromWeightActionPerformed(evt);
+            }
+        });
+
+        toWeight.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Kilograms", "Grams", "Pounds", "Ounces" }));
+
+        convertWeight.setText("Convert");
+        convertWeight.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                convertWeightActionPerformed(evt);
+            }
+        });
+
+        jLabel17.setText("Enter the Weight");
+
+        javax.swing.GroupLayout weightPanelLayout = new javax.swing.GroupLayout(weightPanel);
+        weightPanel.setLayout(weightPanelLayout);
+        weightPanelLayout.setHorizontalGroup(
+            weightPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(weightPanelLayout.createSequentialGroup()
+                .addGroup(weightPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(weightPanelLayout.createSequentialGroup()
+                        .addGap(194, 194, 194)
+                        .addComponent(jLabel14))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, weightPanelLayout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(convertWeight, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(weightPanelLayout.createSequentialGroup()
+                        .addGap(100, 100, 100)
+                        .addGroup(weightPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addGroup(weightPanelLayout.createSequentialGroup()
+                                .addComponent(jLabel16)
+                                .addGap(112, 112, 112)
+                                .addComponent(toWeight, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, weightPanelLayout.createSequentialGroup()
+                                .addGroup(weightPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(jLabel15)
+                                    .addComponent(jLabel17))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addGroup(weightPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                    .addComponent(fromWeight, 0, 150, Short.MAX_VALUE)
+                                    .addComponent(weightInput))))))
+                .addContainerGap(135, Short.MAX_VALUE))
+        );
+        weightPanelLayout.setVerticalGroup(
+            weightPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(weightPanelLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jLabel14)
+                .addGap(30, 30, 30)
+                .addGroup(weightPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel17)
+                    .addComponent(weightInput, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addGroup(weightPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel15)
+                    .addComponent(fromWeight, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addGroup(weightPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(toWeight, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel16))
+                .addGap(18, 18, 18)
+                .addComponent(convertWeight, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(43, Short.MAX_VALUE))
+        );
+
+        jLabel3.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        jLabel3.setText("Speed Converter");
+
+        jLabel20.setText("Convert From");
+
+        jLabel21.setText("Convert To");
+
+        fromSpeed.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Kilometers per Hour", "Miles per Hour", "Meters per Second", "Feet per Second", "Knots" }));
+        fromSpeed.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                fromSpeedActionPerformed(evt);
+            }
+        });
+
+        toSpeed.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Kilometers per Hour", "Miles per Hour", "Meters per Second", "Feet per Second", "Knots" }));
+
+        convertSpeed.setText("Convert");
+        convertSpeed.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                convertSpeedActionPerformed(evt);
+            }
+        });
+
+        jLabel22.setText("Enter the Speed");
+
+        javax.swing.GroupLayout speedPanelLayout = new javax.swing.GroupLayout(speedPanel);
+        speedPanel.setLayout(speedPanelLayout);
+        speedPanelLayout.setHorizontalGroup(
+            speedPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(speedPanelLayout.createSequentialGroup()
+                .addGroup(speedPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(speedPanelLayout.createSequentialGroup()
+                        .addGap(194, 194, 194)
+                        .addComponent(jLabel3))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, speedPanelLayout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(convertSpeed, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(speedPanelLayout.createSequentialGroup()
+                        .addGap(100, 100, 100)
+                        .addGroup(speedPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addGroup(speedPanelLayout.createSequentialGroup()
+                                .addComponent(jLabel21)
+                                .addGap(112, 112, 112)
+                                .addComponent(toSpeed, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, speedPanelLayout.createSequentialGroup()
+                                .addGroup(speedPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(jLabel20)
+                                    .addComponent(jLabel22))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addGroup(speedPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                    .addComponent(fromSpeed, 0, 150, Short.MAX_VALUE)
+                                    .addComponent(speedInput))))))
+                .addContainerGap(135, Short.MAX_VALUE))
+        );
+        speedPanelLayout.setVerticalGroup(
+            speedPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(speedPanelLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jLabel3)
+                .addGap(30, 30, 30)
+                .addGroup(speedPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel22)
+                    .addComponent(speedInput, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addGroup(speedPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel20)
+                    .addComponent(fromSpeed, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addGroup(speedPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(toSpeed, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel21))
+                .addGap(18, 18, 18)
+                .addComponent(convertSpeed, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(43, Short.MAX_VALUE))
+        );
+
+        jLabel5.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        jLabel5.setText("Volume Converter");
+
+        jLabel23.setText("Convert From");
+
+        jLabel24.setText("Convert To");
+
+        fromVolume.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Litres", "Gallons", "Cubic Meters", "Cubic Feet" }));
+        fromVolume.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                fromVolumeActionPerformed(evt);
+            }
+        });
+
+        toVolume.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Litres", "Gallons", "Cubic Meters", "Cubic Feet" }));
+
+        convertVolume.setText("Convert");
+        convertVolume.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                convertVolumeActionPerformed(evt);
+            }
+        });
+
+        jLabel25.setText("Enter the Volume");
+
+        javax.swing.GroupLayout volumePanelLayout = new javax.swing.GroupLayout(volumePanel);
+        volumePanel.setLayout(volumePanelLayout);
+        volumePanelLayout.setHorizontalGroup(
+            volumePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(volumePanelLayout.createSequentialGroup()
+                .addGroup(volumePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(volumePanelLayout.createSequentialGroup()
+                        .addGap(194, 194, 194)
+                        .addComponent(jLabel5))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, volumePanelLayout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(convertVolume, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(volumePanelLayout.createSequentialGroup()
+                        .addGap(100, 100, 100)
+                        .addGroup(volumePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addGroup(volumePanelLayout.createSequentialGroup()
+                                .addComponent(jLabel24)
+                                .addGap(112, 112, 112)
+                                .addComponent(toVolume, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, volumePanelLayout.createSequentialGroup()
+                                .addGroup(volumePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(jLabel23)
+                                    .addComponent(jLabel25))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addGroup(volumePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                    .addComponent(fromVolume, 0, 150, Short.MAX_VALUE)
+                                    .addComponent(volumeInput))))))
+                .addContainerGap(145, Short.MAX_VALUE))
+        );
+        volumePanelLayout.setVerticalGroup(
+            volumePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(volumePanelLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jLabel5)
+                .addGap(30, 30, 30)
+                .addGroup(volumePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel25)
+                    .addComponent(volumeInput, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addGroup(volumePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel23)
+                    .addComponent(fromVolume, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addGroup(volumePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(toVolume, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel24))
+                .addGap(18, 18, 18)
+                .addComponent(convertVolume, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(43, Short.MAX_VALUE))
+        );
+
         jLayeredPane1.setLayer(lengthPanel, javax.swing.JLayeredPane.DEFAULT_LAYER);
-        jLayeredPane1.setLayer(speedPanel, javax.swing.JLayeredPane.DEFAULT_LAYER);
         jLayeredPane1.setLayer(forcePanel, javax.swing.JLayeredPane.DEFAULT_LAYER);
         jLayeredPane1.setLayer(temperaturePanel, javax.swing.JLayeredPane.DEFAULT_LAYER);
         jLayeredPane1.setLayer(densityPanel, javax.swing.JLayeredPane.DEFAULT_LAYER);
         jLayeredPane1.setLayer(energyPanel, javax.swing.JLayeredPane.DEFAULT_LAYER);
         jLayeredPane1.setLayer(areaPanel, javax.swing.JLayeredPane.DEFAULT_LAYER);
+        jLayeredPane1.setLayer(weightPanel, javax.swing.JLayeredPane.DEFAULT_LAYER);
+        jLayeredPane1.setLayer(speedPanel, javax.swing.JLayeredPane.DEFAULT_LAYER);
+        jLayeredPane1.setLayer(volumePanel, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         javax.swing.GroupLayout jLayeredPane1Layout = new javax.swing.GroupLayout(jLayeredPane1);
         jLayeredPane1.setLayout(jLayeredPane1Layout);
@@ -453,13 +642,7 @@ public class MainPage extends javax.swing.JFrame {
             jLayeredPane1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(energyPanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addGroup(jLayeredPane1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addComponent(volumePanel, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-            .addGroup(jLayeredPane1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addComponent(weightPanel, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-            .addGroup(jLayeredPane1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addComponent(lengthPanel, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-            .addGroup(jLayeredPane1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addComponent(speedPanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addGroup(jLayeredPane1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addComponent(forcePanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addGroup(jLayeredPane1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -468,18 +651,18 @@ public class MainPage extends javax.swing.JFrame {
                 .addComponent(densityPanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addGroup(jLayeredPane1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addComponent(areaPanel, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addGroup(jLayeredPane1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addComponent(weightPanel, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addGroup(jLayeredPane1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addComponent(speedPanel, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addGroup(jLayeredPane1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addComponent(volumePanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jLayeredPane1Layout.setVerticalGroup(
             jLayeredPane1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(energyPanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addGroup(jLayeredPane1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addComponent(volumePanel, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-            .addGroup(jLayeredPane1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addComponent(weightPanel, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-            .addGroup(jLayeredPane1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addComponent(lengthPanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-            .addGroup(jLayeredPane1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addComponent(speedPanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addGroup(jLayeredPane1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addComponent(forcePanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addGroup(jLayeredPane1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -488,6 +671,12 @@ public class MainPage extends javax.swing.JFrame {
                 .addComponent(densityPanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addGroup(jLayeredPane1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addComponent(areaPanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addGroup(jLayeredPane1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addComponent(weightPanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addGroup(jLayeredPane1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addComponent(speedPanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addGroup(jLayeredPane1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addComponent(volumePanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
@@ -683,15 +872,15 @@ public class MainPage extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_fromLengthActionPerformed
 
-    private void jButton10ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton10ActionPerformed
+    private void convertLengthActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_convertLengthActionPerformed
 
-    }//GEN-LAST:event_jButton10ActionPerformed
+    }//GEN-LAST:event_convertLengthActionPerformed
 
     private void fromAreaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_fromAreaActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_fromAreaActionPerformed
 
-    private void jButton12ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton12ActionPerformed
+    private void convertAreaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_convertAreaActionPerformed
         try{
             //Converting Square Meters
             Double convertedArea;
@@ -836,7 +1025,259 @@ public class MainPage extends javax.swing.JFrame {
         }
     }
     catch(java.lang.NumberFormatException e){JOptionPane.showMessageDialog(this,"Only Numerical Input is Allowed");}
-    }//GEN-LAST:event_jButton12ActionPerformed
+    }//GEN-LAST:event_convertAreaActionPerformed
+
+    private void fromWeightActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_fromWeightActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_fromWeightActionPerformed
+
+    private void convertWeightActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_convertWeightActionPerformed
+        try{
+            //Converting Kilograms
+            Double convertedWeight;
+            Double inputWeight=Double.parseDouble(weightInput.getText());
+            if(fromWeight.getSelectedItem().toString()=="Kilograms" && toWeight.getSelectedItem().toString()=="Grams"){
+            convertedWeight=inputWeight*1000;
+            JOptionPane.showMessageDialog(this, "The Weight in Grams is "+convertedWeight.toString());
+        }
+            else if(fromWeight.getSelectedItem().toString()=="Kilograms" && toWeight.getSelectedItem().toString()=="Pounds"){
+            convertedWeight=inputWeight*2.205;
+            JOptionPane.showMessageDialog(this, "The Weight in Pounds is "+convertedWeight.toString());
+        }
+            else if(fromWeight.getSelectedItem().toString()=="Kilograms" && toWeight.getSelectedItem().toString()=="Ounces"){
+            convertedWeight=inputWeight*35.275;
+            JOptionPane.showMessageDialog(this, "The Weight in Ounces is "+convertedWeight.toString());
+        }
+            
+            //Converting Grams
+            else if(fromWeight.getSelectedItem().toString()=="Grams" && toWeight.getSelectedItem().toString()=="Kilograms"){
+            convertedWeight=inputWeight/1000;
+            JOptionPane.showMessageDialog(this, "The Weight in Kilograms is "+convertedWeight.toString());
+        }
+            else if(fromWeight.getSelectedItem().toString()=="Grams" && toWeight.getSelectedItem().toString()=="Pounds"){
+            convertedWeight=inputWeight/454;
+            JOptionPane.showMessageDialog(this, "The Weight in Pounds is "+convertedWeight.toString());
+        }
+            else if(fromWeight.getSelectedItem().toString()=="Grams" && toWeight.getSelectedItem().toString()=="Ounces"){
+            convertedWeight=inputWeight/28.35;
+            JOptionPane.showMessageDialog(this, "The Weight in Ounces is "+convertedWeight.toString());
+        }
+            
+            //Converting Pounds
+            else if(fromWeight.getSelectedItem().toString()=="Pounds" && toWeight.getSelectedItem().toString()=="Kilograms"){
+            convertedWeight=inputWeight/2.205;
+            JOptionPane.showMessageDialog(this, "The Weight in Kilograms is "+convertedWeight.toString());
+        }
+            else if(fromWeight.getSelectedItem().toString()=="Pounds" && toWeight.getSelectedItem().toString()=="Grams"){
+            convertedWeight=inputWeight*454;
+            JOptionPane.showMessageDialog(this, "The Weight in Grams is "+convertedWeight.toString());
+        }
+            else if(fromWeight.getSelectedItem().toString()=="Pounds" && toWeight.getSelectedItem().toString()=="Ounces"){
+            convertedWeight=inputWeight*16;
+            JOptionPane.showMessageDialog(this, "The Weight in Ounces is "+convertedWeight.toString());
+        }
+            
+            //Converting Ounces0
+            else if(fromWeight.getSelectedItem().toString()=="Ounces" && toWeight.getSelectedItem().toString()=="Kilograms"){
+            convertedWeight=inputWeight/35.274;
+            JOptionPane.showMessageDialog(this, "The Weight in Kilograms is "+convertedWeight.toString());
+        }
+            else if(fromWeight.getSelectedItem().toString()=="Ounces" && toWeight.getSelectedItem().toString()=="Grams"){
+            convertedWeight=inputWeight*28.35;
+            JOptionPane.showMessageDialog(this, "The Weight in Grams is "+convertedWeight.toString());
+        }
+            else if(fromWeight.getSelectedItem().toString()=="Ounces" && toWeight.getSelectedItem().toString()=="Pounds"){
+            convertedWeight=inputWeight/16;
+            JOptionPane.showMessageDialog(this, "The Weight in Pounds is "+convertedWeight.toString());
+        }
+            
+            
+            else if(fromWeight.getSelectedItem().toString()==toWeight.getSelectedItem().toString()){
+            JOptionPane.showMessageDialog(this, "Same units selected");
+        }
+    }
+    catch(java.lang.NumberFormatException e){JOptionPane.showMessageDialog(this,"Only Numerical Input is Allowed");}
+    }//GEN-LAST:event_convertWeightActionPerformed
+
+    private void fromSpeedActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_fromSpeedActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_fromSpeedActionPerformed
+
+    private void convertSpeedActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_convertSpeedActionPerformed
+        try{
+            //Converting Km/h
+            Double convertedSpeed;
+            Double inputSpeed=Double.parseDouble(speedInput.getText());
+            if(fromSpeed.getSelectedItem().toString()=="Kilometers per Hour" && toSpeed.getSelectedItem().toString()=="Meters per Second"){
+            convertedSpeed=inputSpeed/3.6;
+            JOptionPane.showMessageDialog(this, "The Speed in Meters per Second is "+convertedSpeed.toString());
+        }
+            else if(fromSpeed.getSelectedItem().toString()=="Kilometers per Hour" && toSpeed.getSelectedItem().toString()=="Feet per Second"){
+            convertedSpeed=inputSpeed/1.097;
+            JOptionPane.showMessageDialog(this, "The Speed in Feet per Second is "+convertedSpeed.toString());
+        }
+            else if(fromSpeed.getSelectedItem().toString()=="Kilometers per Hour" && toSpeed.getSelectedItem().toString()=="Miles per Hour"){
+            convertedSpeed=inputSpeed/1.609;
+            JOptionPane.showMessageDialog(this, "The Speed in Miles per Hour is "+convertedSpeed.toString());
+        }
+            else if(fromSpeed.getSelectedItem().toString()=="Kilometers per Hour" && toSpeed.getSelectedItem().toString()=="Knots"){
+            convertedSpeed=inputSpeed/1.852;
+            JOptionPane.showMessageDialog(this, "The Speed in Knots is "+convertedSpeed.toString());
+        }
+            
+            //Converting m/s
+            else if(fromSpeed.getSelectedItem().toString()=="Meters per Second" && toSpeed.getSelectedItem().toString()=="Kilometers per Hour"){
+            convertedSpeed=inputSpeed*3.6;
+            JOptionPane.showMessageDialog(this, "The Speed in Kilometers per Hour is "+convertedSpeed.toString());
+        }
+            else if(fromSpeed.getSelectedItem().toString()=="Kilometers per Hour" && toSpeed.getSelectedItem().toString()=="Feet per Second"){
+            convertedSpeed=inputSpeed*3.281;
+            JOptionPane.showMessageDialog(this, "The Speed in Feet per Second is "+convertedSpeed.toString());
+        }
+            else if(fromSpeed.getSelectedItem().toString()=="Kilometers per Hour" && toSpeed.getSelectedItem().toString()=="Miles per Hour"){
+            convertedSpeed=inputSpeed*2.237;
+            JOptionPane.showMessageDialog(this, "The Speed in Miles per Hour is "+convertedSpeed.toString());
+        }
+            else if(fromSpeed.getSelectedItem().toString()=="Kilometers per Hour" && toSpeed.getSelectedItem().toString()=="Knots"){
+            convertedSpeed=inputSpeed*1.944;
+            JOptionPane.showMessageDialog(this, "The Speed in Knots is "+convertedSpeed.toString());
+        }
+            
+            //Converting Ft/s
+            else if(fromSpeed.getSelectedItem().toString()=="Feet per Second" && toSpeed.getSelectedItem().toString()=="Kilometers per Hour"){
+            convertedSpeed=inputSpeed*1.097;
+            JOptionPane.showMessageDialog(this, "The Speed in Kilometers per Hour is "+convertedSpeed.toString());
+        }
+            else if(fromSpeed.getSelectedItem().toString()=="Feet per Second" && toSpeed.getSelectedItem().toString()=="Meters per Second"){
+            convertedSpeed=inputSpeed/3.281;
+            JOptionPane.showMessageDialog(this, "The Speed in Meters per Second is "+convertedSpeed.toString());
+        }
+            else if(fromSpeed.getSelectedItem().toString()=="Feet per Second" && toSpeed.getSelectedItem().toString()=="Miles per Hour"){
+            convertedSpeed=inputSpeed/1.467;
+            JOptionPane.showMessageDialog(this, "The Speed in Miles per Hour is "+convertedSpeed.toString());
+        }
+            else if(fromSpeed.getSelectedItem().toString()=="Feet per Second" && toSpeed.getSelectedItem().toString()=="Knots"){
+            convertedSpeed=inputSpeed/1.688;
+            JOptionPane.showMessageDialog(this, "The Speed in Knots is "+convertedSpeed.toString());
+        }
+            
+            //Converting Miles/hr
+            
+            else if(fromSpeed.getSelectedItem().toString()=="Miles per Hour" && toSpeed.getSelectedItem().toString()=="Kilometers per Hour"){
+            convertedSpeed=inputSpeed*1.609;
+            JOptionPane.showMessageDialog(this, "The Speed in Kilometers per Hour is "+convertedSpeed.toString());
+        }
+            else if(fromSpeed.getSelectedItem().toString()=="Miles per Hour" && toSpeed.getSelectedItem().toString()=="Meters per Second"){
+            convertedSpeed=inputSpeed/2.237;
+            JOptionPane.showMessageDialog(this, "The Speed in Meters per Second is "+convertedSpeed.toString());
+        }
+            else if(fromSpeed.getSelectedItem().toString()=="Miles per Hour" && toSpeed.getSelectedItem().toString()=="Feet per Second"){
+            convertedSpeed=inputSpeed*1.467;
+            JOptionPane.showMessageDialog(this, "The Speed in Feet per Second is "+convertedSpeed.toString());
+        }
+            else if(fromSpeed.getSelectedItem().toString()=="Miles per Hour" && toSpeed.getSelectedItem().toString()=="Knots"){
+            convertedSpeed=inputSpeed/1.151;
+            JOptionPane.showMessageDialog(this, "The Speed in Knots is "+convertedSpeed.toString());
+        }
+            
+            //Converting Knots
+            else if(fromSpeed.getSelectedItem().toString()=="Knots" && toSpeed.getSelectedItem().toString()=="Kilometers per Hour"){
+            convertedSpeed=inputSpeed*1.852;
+            JOptionPane.showMessageDialog(this, "The Speed in Kilometers per Hour is "+convertedSpeed.toString());
+        }
+            else if(fromSpeed.getSelectedItem().toString()=="Knots" && toSpeed.getSelectedItem().toString()=="Meters per Second"){
+            convertedSpeed=inputSpeed/1.944;
+            JOptionPane.showMessageDialog(this, "The Speed in Meters per Second is "+convertedSpeed.toString());
+        }
+            else if(fromSpeed.getSelectedItem().toString()=="Knots" && toSpeed.getSelectedItem().toString()=="Feet per Second"){
+            convertedSpeed=inputSpeed*1.688;
+            JOptionPane.showMessageDialog(this, "The Speed in Miles per Hour is "+convertedSpeed.toString());
+        }
+            else if(fromSpeed.getSelectedItem().toString()=="Knots" && toSpeed.getSelectedItem().toString()=="Miles per Hour"){
+            convertedSpeed=inputSpeed*1.151;
+            JOptionPane.showMessageDialog(this, "The Speed in Miles per Hour is "+convertedSpeed.toString());
+        }
+            
+            
+            
+            else if(fromSpeed.getSelectedItem().toString()==toSpeed.getSelectedItem().toString()){
+            JOptionPane.showMessageDialog(this, "Same units selected");
+        }
+    }
+    catch(java.lang.NumberFormatException e){JOptionPane.showMessageDialog(this,"Only Numerical Input is Allowed");}
+    }//GEN-LAST:event_convertSpeedActionPerformed
+
+    private void fromVolumeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_fromVolumeActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_fromVolumeActionPerformed
+
+    private void convertVolumeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_convertVolumeActionPerformed
+        try{
+            //Converting Litres
+            Double convertedVolume;
+            Double inputVolume=Double.parseDouble(volumeInput.getText());
+            if(fromVolume.getSelectedItem().toString()=="Litres" && toVolume.getSelectedItem().toString()=="Gallons"){
+            convertedVolume=inputVolume/4.546;
+            JOptionPane.showMessageDialog(this, "The Volume in Gallons is "+convertedVolume.toString());
+        }
+            else if(fromVolume.getSelectedItem().toString()=="Litres" && toVolume.getSelectedItem().toString()=="Cubic Meters"){
+            convertedVolume=inputVolume/1000;
+            JOptionPane.showMessageDialog(this, "The Volume in Cubic Meters is "+convertedVolume.toString());
+        }
+            else if(fromVolume.getSelectedItem().toString()=="Litres" && toVolume.getSelectedItem().toString()=="Cubic Feet"){
+            convertedVolume=inputVolume/28.317;
+            JOptionPane.showMessageDialog(this, "The Volume in Cubic Feet is "+convertedVolume.toString());
+        }
+            
+            //Converting Gallons
+            else if(fromVolume.getSelectedItem().toString()=="Gallons" && toVolume.getSelectedItem().toString()=="Litres"){
+            convertedVolume=inputVolume*4.546;
+            JOptionPane.showMessageDialog(this, "The Volume in Litres is "+convertedVolume.toString());
+        }
+            else if(fromVolume.getSelectedItem().toString()=="Gallons" && toVolume.getSelectedItem().toString()=="Cubic Meters"){
+            convertedVolume=inputVolume/220;
+            JOptionPane.showMessageDialog(this, "The Volume in Cubic Meters is "+convertedVolume.toString());
+        }
+            else if(fromVolume.getSelectedItem().toString()=="Gallons" && toVolume.getSelectedItem().toString()=="Cubic Feet"){
+            convertedVolume=inputVolume/6.229;
+            JOptionPane.showMessageDialog(this, "The Volume in Cubic Feet is "+convertedVolume.toString());
+        }
+            
+            //Converting Cubic Meters
+            else if(fromVolume.getSelectedItem().toString()=="Cubic Meters" && toVolume.getSelectedItem().toString()=="Litres"){
+            convertedVolume=inputVolume*1000;
+            JOptionPane.showMessageDialog(this, "The Volume in Litres is "+convertedVolume.toString());
+        }
+            else if(fromVolume.getSelectedItem().toString()=="Cubic Meters" && toVolume.getSelectedItem().toString()=="Gallons"){
+            convertedVolume=inputVolume*220;
+            JOptionPane.showMessageDialog(this, "The Volume in Gallons is "+convertedVolume.toString());
+        }
+            else if(fromVolume.getSelectedItem().toString()=="Cubic Meters" && toVolume.getSelectedItem().toString()=="Cubic Feet"){
+            convertedVolume=inputVolume*35.315;
+            JOptionPane.showMessageDialog(this, "The Volume in Cubic Feet is "+convertedVolume.toString());
+        }
+            
+            //Converting Cubic Feet
+            else if(fromVolume.getSelectedItem().toString()=="Cubic Feet" && toVolume.getSelectedItem().toString()=="Litres"){
+            convertedVolume=inputVolume*28.317;
+            JOptionPane.showMessageDialog(this, "The Volume in Litres is "+convertedVolume.toString());
+        }
+            else if(fromVolume.getSelectedItem().toString()=="Cubic Feet" && toVolume.getSelectedItem().toString()=="Gallons"){
+            convertedVolume=inputVolume*6.229;
+            JOptionPane.showMessageDialog(this, "The Volume in Gallons is "+convertedVolume.toString());
+        }
+            else if(fromVolume.getSelectedItem().toString()=="Cubic Feet" && toVolume.getSelectedItem().toString()=="Cubic Meters"){
+            convertedVolume=inputVolume/35.315;
+            JOptionPane.showMessageDialog(this, "The Volume in Cubic Meters is "+convertedVolume.toString());
+        }
+            
+            
+            else if(fromVolume.getSelectedItem().toString()==toVolume.getSelectedItem().toString()){
+            JOptionPane.showMessageDialog(this, "Same units selected");
+        }
+    }
+    catch(java.lang.NumberFormatException e){JOptionPane.showMessageDialog(this,"Only Numerical Input is Allowed");}
+    }//GEN-LAST:event_convertVolumeActionPerformed
 
     /**
      * @param args the command line arguments
@@ -877,14 +1318,20 @@ public class MainPage extends javax.swing.JFrame {
     private javax.swing.JLabel appTitle;
     private javax.swing.JTextField areaInput;
     private javax.swing.JPanel areaPanel;
+    private javax.swing.JButton convertArea;
+    private javax.swing.JButton convertLength;
+    private javax.swing.JButton convertSpeed;
+    private javax.swing.JButton convertVolume;
+    private javax.swing.JButton convertWeight;
     private javax.swing.JPanel densityPanel;
     private javax.swing.JPanel energyPanel;
     private javax.swing.JPanel forcePanel;
     private javax.swing.JComboBox<String> fromArea;
     private javax.swing.JComboBox<String> fromLength;
+    private javax.swing.JComboBox<String> fromSpeed;
+    private javax.swing.JComboBox<String> fromVolume;
+    private javax.swing.JComboBox<String> fromWeight;
     private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton10;
-    private javax.swing.JButton jButton12;
     private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;
     private javax.swing.JButton jButton4;
@@ -898,11 +1345,20 @@ public class MainPage extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel11;
     private javax.swing.JLabel jLabel12;
     private javax.swing.JLabel jLabel13;
+    private javax.swing.JLabel jLabel14;
+    private javax.swing.JLabel jLabel15;
+    private javax.swing.JLabel jLabel16;
+    private javax.swing.JLabel jLabel17;
     private javax.swing.JLabel jLabel18;
     private javax.swing.JLabel jLabel19;
     private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel20;
+    private javax.swing.JLabel jLabel21;
+    private javax.swing.JLabel jLabel22;
+    private javax.swing.JLabel jLabel23;
+    private javax.swing.JLabel jLabel24;
+    private javax.swing.JLabel jLabel25;
     private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
@@ -912,11 +1368,17 @@ public class MainPage extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel1;
     private javax.swing.JTextField lengthInput;
     private javax.swing.JPanel lengthPanel;
+    private javax.swing.JTextField speedInput;
     private javax.swing.JPanel speedPanel;
     private javax.swing.JPanel temperaturePanel;
     private javax.swing.JComboBox<String> toArea;
     private javax.swing.JComboBox<String> toLength;
+    private javax.swing.JComboBox<String> toSpeed;
+    private javax.swing.JComboBox<String> toVolume;
+    private javax.swing.JComboBox<String> toWeight;
+    private javax.swing.JTextField volumeInput;
     private javax.swing.JPanel volumePanel;
+    private javax.swing.JTextField weightInput;
     private javax.swing.JPanel weightPanel;
     // End of variables declaration//GEN-END:variables
 }
