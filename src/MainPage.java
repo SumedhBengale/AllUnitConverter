@@ -873,7 +873,150 @@ public class MainPage extends javax.swing.JFrame {
     }//GEN-LAST:event_fromLengthActionPerformed
 
     private void convertLengthActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_convertLengthActionPerformed
-
+        try{
+            //Converting Meters
+            Double convertedLength;
+            Double inputLength=Double.parseDouble(lengthInput.getText());
+            if(fromLength.getSelectedItem().toString()=="Meters" && toLength.getSelectedItem().toString()=="Feet"){
+            convertedLength=inputLength*3.28084;
+            JOptionPane.showMessageDialog(this, "The Length in Feet is "+convertedLength.toString());
+        }
+            else if(fromLength.getSelectedItem().toString()=="Meters" && toLength.getSelectedItem().toString()=="Inches"){
+            convertedLength=inputLength*39.37;
+            JOptionPane.showMessageDialog(this, "The Length in Inches is "+convertedLength.toString());
+        }
+            else if(fromLength.getSelectedItem().toString()=="Meters" && toLength.getSelectedItem().toString()=="Centimeters"){
+            convertedLength=inputLength*100;
+            JOptionPane.showMessageDialog(this, "The Length in Centimeters is "+convertedLength.toString());
+        }
+            else if(fromLength.getSelectedItem().toString()=="Meters" && toLength.getSelectedItem().toString()=="Millimeters"){
+            convertedLength=inputLength*1000;
+            JOptionPane.showMessageDialog(this, "The Length in Millimeters is "+convertedLength.toString());
+        }
+            else if(fromLength.getSelectedItem().toString()=="Meters" && toLength.getSelectedItem().toString()=="Yards"){
+            convertedLength=inputLength*1.094;
+            JOptionPane.showMessageDialog(this, "The Length in Yards is "+convertedLength.toString());
+        }
+            
+            //Converting Feet
+            else if(fromLength.getSelectedItem().toString()=="Feet" && toLength.getSelectedItem().toString()=="Meters"){
+            convertedLength=inputLength/3.28084;
+            JOptionPane.showMessageDialog(this, "The Length in Meters is "+convertedLength.toString());
+        }
+            else if(fromLength.getSelectedItem().toString()=="Feet" && toLength.getSelectedItem().toString()=="Inches"){
+            convertedLength=inputLength*12;
+            JOptionPane.showMessageDialog(this, "The Length in Inches is "+convertedLength.toString());
+        }
+            else if(fromLength.getSelectedItem().toString()=="Feet" && toLength.getSelectedItem().toString()=="Centimeters"){
+            convertedLength=inputLength*30.48;
+            JOptionPane.showMessageDialog(this, "The Length in Centimeters is "+convertedLength.toString());
+        }
+            else if(fromLength.getSelectedItem().toString()=="Feet" && toLength.getSelectedItem().toString()=="Millimeters"){
+            convertedLength=inputLength*305;
+            JOptionPane.showMessageDialog(this, "The Length in Millimeters is "+convertedLength.toString());
+        }
+            else if(fromLength.getSelectedItem().toString()=="Feet" && toLength.getSelectedItem().toString()=="Yards"){
+            convertedLength=inputLength/3;
+            JOptionPane.showMessageDialog(this, "The Length in Yards is "+convertedLength.toString());
+        }
+            
+            
+            //Converting Inches
+            else if(fromLength.getSelectedItem().toString()=="Inches" && toLength.getSelectedItem().toString()=="Meters"){
+            convertedLength=inputLength/39.37;
+            JOptionPane.showMessageDialog(this, "The Length in Meters is "+convertedLength.toString());
+        }
+            else if(fromLength.getSelectedItem().toString()=="Inches" && toLength.getSelectedItem().toString()=="Feet"){
+            convertedLength=inputLength/12;
+            JOptionPane.showMessageDialog(this, "The Length in Feet is "+convertedLength.toString());
+        }
+            else if(fromLength.getSelectedItem().toString()=="Inches" && toLength.getSelectedItem().toString()=="Centimeters"){
+            convertedLength=inputLength*2.54;
+            JOptionPane.showMessageDialog(this, "The Length in Centimeters is "+convertedLength.toString());
+        }
+            else if(fromLength.getSelectedItem().toString()=="Inches" && toLength.getSelectedItem().toString()=="Millimeters"){
+            convertedLength=inputLength*25.4;
+            JOptionPane.showMessageDialog(this, "The Length in Millimeters is "+convertedLength.toString());
+        }
+            else if(fromLength.getSelectedItem().toString()=="Inches" && toLength.getSelectedItem().toString()=="Yards"){
+            convertedLength=inputLength/36;
+            JOptionPane.showMessageDialog(this, "The Length in Yards is "+convertedLength.toString());
+        }
+            
+            
+            //Converting Centimeters
+            else if(fromLength.getSelectedItem().toString()=="Centimeters" && toLength.getSelectedItem().toString()=="Meters"){
+            convertedLength=inputLength/100;
+            JOptionPane.showMessageDialog(this, "The Length in Meters is "+convertedLength.toString());
+        }
+            else if(fromLength.getSelectedItem().toString()=="Centimeters" && toLength.getSelectedItem().toString()=="Feet"){
+            convertedLength=inputLength/30.48;
+            JOptionPane.showMessageDialog(this, "The Length in Feet is "+convertedLength.toString());
+        }
+            else if(fromLength.getSelectedItem().toString()=="Centimeters" && toLength.getSelectedItem().toString()=="Inches"){
+            convertedLength=inputLength/2.54;
+            JOptionPane.showMessageDialog(this, "The Length in Inches is "+convertedLength.toString());
+        }
+            else if(fromLength.getSelectedItem().toString()=="Centimeters" && toLength.getSelectedItem().toString()=="Millimeters"){
+            convertedLength=inputLength*10;
+            JOptionPane.showMessageDialog(this, "The Length in Millimeters is "+convertedLength.toString());
+        }
+            else if(fromLength.getSelectedItem().toString()=="Centimeters" && toLength.getSelectedItem().toString()=="Yards"){
+            convertedLength=inputLength/91.44;
+            JOptionPane.showMessageDialog(this, "The Length in Yards is "+convertedLength.toString());
+        }
+            
+            
+            //Converting Millimeters
+            else if(fromLength.getSelectedItem().toString()=="Millimeters" && toLength.getSelectedItem().toString()=="Meters"){
+            convertedLength=inputLength/1000;
+            JOptionPane.showMessageDialog(this, "The Length in Meters is "+convertedLength.toString());
+        }
+            else if(fromLength.getSelectedItem().toString()=="Millimeters" && toLength.getSelectedItem().toString()=="Centimeters"){
+            convertedLength=inputLength*100;
+            JOptionPane.showMessageDialog(this, "The Length in Centimeters is "+convertedLength.toString());
+        }
+            else if(fromLength.getSelectedItem().toString()=="Millimeters" && toLength.getSelectedItem().toString()=="Inches"){
+            convertedLength=inputLength/25.4;
+            JOptionPane.showMessageDialog(this, "The Length in Inches is "+convertedLength.toString());
+        }
+            else if(fromLength.getSelectedItem().toString()=="Millimeters" && toLength.getSelectedItem().toString()=="Feet"){
+            convertedLength=inputLength/305;
+            JOptionPane.showMessageDialog(this, "The Length in Feet is "+convertedLength.toString());
+        }
+            else if(fromLength.getSelectedItem().toString()=="Millimeters" && toLength.getSelectedItem().toString()=="Yards"){
+            convertedLength=inputLength/914;
+            JOptionPane.showMessageDialog(this, "The Length in Yards is "+convertedLength.toString());
+        }
+            
+            //Converting Yards
+            else if(fromLength.getSelectedItem().toString()=="Yards" && toLength.getSelectedItem().toString()=="Meters"){
+            convertedLength=inputLength/1.094;
+            JOptionPane.showMessageDialog(this, "The Length in Meters is "+convertedLength.toString());
+        }
+            else if(fromLength.getSelectedItem().toString()=="Yards" && toLength.getSelectedItem().toString()=="Centimeters"){
+            convertedLength=inputLength*91.44;
+            JOptionPane.showMessageDialog(this, "The Length in Centimeters is "+convertedLength.toString());
+        }
+            else if(fromLength.getSelectedItem().toString()=="Yards" && toLength.getSelectedItem().toString()=="Inches"){
+            convertedLength=inputLength*36;
+            JOptionPane.showMessageDialog(this, "The Length in Inches is "+convertedLength.toString());
+        }
+            else if(fromLength.getSelectedItem().toString()=="Yards" && toLength.getSelectedItem().toString()=="Feet"){
+            convertedLength=inputLength*3;
+            JOptionPane.showMessageDialog(this, "The Length in Feet is "+convertedLength.toString());
+        }
+            else if(fromLength.getSelectedItem().toString()=="Yards" && toLength.getSelectedItem().toString()=="Millimeters"){
+            convertedLength=inputLength*914;
+            JOptionPane.showMessageDialog(this, "The Length in Millimeters is "+convertedLength.toString());
+        }
+            
+            
+            else if(fromLength.getSelectedItem().toString()==toLength.getSelectedItem().toString()){
+            JOptionPane.showMessageDialog(this, "Same units selected");
+        }
+    }
+    catch(java.lang.NumberFormatException e){JOptionPane.showMessageDialog(this,"Only Numerical Input is Allowed");}
     }//GEN-LAST:event_convertLengthActionPerformed
 
     private void fromAreaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_fromAreaActionPerformed
