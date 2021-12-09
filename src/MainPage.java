@@ -94,6 +94,7 @@ public class MainPage extends javax.swing.JFrame {
         volumeInput = new javax.swing.JTextField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setTitle("All Unit Converter");
         setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
 
         jPanel1.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
@@ -165,6 +166,15 @@ public class MainPage extends javax.swing.JFrame {
         appTitle.setText("All Units");
 
         jLayeredPane1.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        lengthPanel.setVisible(true);
+        areaPanel.setVisible(false);
+        volumePanel.setVisible(false);
+        weightPanel.setVisible(false);
+        speedPanel.setVisible(false);
+        forcePanel.setVisible(false);
+        temperaturePanel.setVisible(false);
+        densityPanel.setVisible(false);
+        energyPanel.setVisible(false);
 
         jLabel1.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         jLabel1.setText("Length Converter");
