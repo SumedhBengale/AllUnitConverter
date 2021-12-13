@@ -48,14 +48,15 @@ public class MainPage extends javax.swing.JFrame {
         convertLength = new javax.swing.JButton();
         jLabel12 = new javax.swing.JLabel();
         lengthInput = new javax.swing.JTextField();
-        forcePanel = new javax.swing.JPanel();
-        jLabel6 = new javax.swing.JLabel();
         temperaturePanel = new javax.swing.JPanel();
-        jLabel7 = new javax.swing.JLabel();
-        densityPanel = new javax.swing.JPanel();
-        jLabel8 = new javax.swing.JLabel();
-        energyPanel = new javax.swing.JPanel();
-        jLabel9 = new javax.swing.JLabel();
+        jLabel37 = new javax.swing.JLabel();
+        jLabel38 = new javax.swing.JLabel();
+        jLabel39 = new javax.swing.JLabel();
+        fromTemp = new javax.swing.JComboBox<>();
+        toTemp = new javax.swing.JComboBox<>();
+        convertTemp = new javax.swing.JButton();
+        jLabel40 = new javax.swing.JLabel();
+        tempInput = new javax.swing.JTextField();
         areaPanel = new javax.swing.JPanel();
         jLabel2 = new javax.swing.JLabel();
         jLabel13 = new javax.swing.JLabel();
@@ -92,6 +93,33 @@ public class MainPage extends javax.swing.JFrame {
         convertVolume = new javax.swing.JButton();
         jLabel25 = new javax.swing.JLabel();
         volumeInput = new javax.swing.JTextField();
+        forcePanel = new javax.swing.JPanel();
+        jLabel6 = new javax.swing.JLabel();
+        jLabel41 = new javax.swing.JLabel();
+        jLabel42 = new javax.swing.JLabel();
+        fromForce = new javax.swing.JComboBox<>();
+        toForce = new javax.swing.JComboBox<>();
+        convertForce = new javax.swing.JButton();
+        jLabel43 = new javax.swing.JLabel();
+        forceInput = new javax.swing.JTextField();
+        densityPanel = new javax.swing.JPanel();
+        jLabel4 = new javax.swing.JLabel();
+        jLabel26 = new javax.swing.JLabel();
+        jLabel27 = new javax.swing.JLabel();
+        fromStorage = new javax.swing.JComboBox<>();
+        toStorage = new javax.swing.JComboBox<>();
+        convertStorage = new javax.swing.JButton();
+        jLabel28 = new javax.swing.JLabel();
+        storageInput = new javax.swing.JTextField();
+        energyPanel = new javax.swing.JPanel();
+        jLabel44 = new javax.swing.JLabel();
+        jLabel45 = new javax.swing.JLabel();
+        jLabel46 = new javax.swing.JLabel();
+        fromPressure = new javax.swing.JComboBox<>();
+        toPressure = new javax.swing.JComboBox<>();
+        convertPressure = new javax.swing.JButton();
+        jLabel47 = new javax.swing.JLabel();
+        pressureInput = new javax.swing.JTextField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("All Unit Converter");
@@ -99,7 +127,7 @@ public class MainPage extends javax.swing.JFrame {
 
         jPanel1.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
 
-        jButton9.setText("Energy");
+        jButton9.setText("Pressure");
         jButton9.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton9ActionPerformed(evt);
@@ -148,7 +176,7 @@ public class MainPage extends javax.swing.JFrame {
             }
         });
 
-        jButton8.setText("Density");
+        jButton8.setText("Digital Storage");
         jButton8.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton8ActionPerformed(evt);
@@ -252,84 +280,80 @@ public class MainPage extends javax.swing.JFrame {
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
-        jLabel6.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
-        jLabel6.setText("Force Converter");
+        jLabel37.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        jLabel37.setText("Temperature Converter");
 
-        javax.swing.GroupLayout forcePanelLayout = new javax.swing.GroupLayout(forcePanel);
-        forcePanel.setLayout(forcePanelLayout);
-        forcePanelLayout.setHorizontalGroup(
-            forcePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(forcePanelLayout.createSequentialGroup()
-                .addGap(198, 198, 198)
-                .addComponent(jLabel6)
-                .addContainerGap(198, Short.MAX_VALUE))
-        );
-        forcePanelLayout.setVerticalGroup(
-            forcePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(forcePanelLayout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jLabel6)
-                .addContainerGap(191, Short.MAX_VALUE))
-        );
+        jLabel38.setText("Convert From");
 
-        jLabel7.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
-        jLabel7.setText("Temperature Converter");
+        jLabel39.setText("Convert To");
+
+        fromTemp.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Celsius", "Fahrenheit", "Kelvin" }));
+        fromTemp.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                fromTempActionPerformed(evt);
+            }
+        });
+
+        toTemp.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Celsius", "Fahrenheit", "Kelvin" }));
+
+        convertTemp.setText("Convert");
+        convertTemp.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                convertTempActionPerformed(evt);
+            }
+        });
+
+        jLabel40.setText("Enter the Temperature");
 
         javax.swing.GroupLayout temperaturePanelLayout = new javax.swing.GroupLayout(temperaturePanel);
         temperaturePanel.setLayout(temperaturePanelLayout);
         temperaturePanelLayout.setHorizontalGroup(
             temperaturePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(temperaturePanelLayout.createSequentialGroup()
-                .addGap(164, 164, 164)
-                .addComponent(jLabel7)
-                .addContainerGap(164, Short.MAX_VALUE))
+                .addGroup(temperaturePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(temperaturePanelLayout.createSequentialGroup()
+                        .addGap(194, 194, 194)
+                        .addComponent(jLabel37))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, temperaturePanelLayout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(convertTemp, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(temperaturePanelLayout.createSequentialGroup()
+                        .addGap(100, 100, 100)
+                        .addGroup(temperaturePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addGroup(temperaturePanelLayout.createSequentialGroup()
+                                .addComponent(jLabel39)
+                                .addGap(112, 112, 112)
+                                .addComponent(toTemp, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, temperaturePanelLayout.createSequentialGroup()
+                                .addGroup(temperaturePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(jLabel38)
+                                    .addComponent(jLabel40))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addGroup(temperaturePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                    .addComponent(fromTemp, 0, 150, Short.MAX_VALUE)
+                                    .addComponent(tempInput))))))
+                .addContainerGap(125, Short.MAX_VALUE))
         );
         temperaturePanelLayout.setVerticalGroup(
             temperaturePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(temperaturePanelLayout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jLabel7)
-                .addContainerGap(191, Short.MAX_VALUE))
-        );
-
-        jLabel8.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
-        jLabel8.setText("Density Converter");
-
-        javax.swing.GroupLayout densityPanelLayout = new javax.swing.GroupLayout(densityPanel);
-        densityPanel.setLayout(densityPanelLayout);
-        densityPanelLayout.setHorizontalGroup(
-            densityPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(densityPanelLayout.createSequentialGroup()
-                .addGap(189, 189, 189)
-                .addComponent(jLabel8)
-                .addContainerGap(189, Short.MAX_VALUE))
-        );
-        densityPanelLayout.setVerticalGroup(
-            densityPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(densityPanelLayout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jLabel8)
-                .addContainerGap(191, Short.MAX_VALUE))
-        );
-
-        jLabel9.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
-        jLabel9.setText("Energy Converter");
-
-        javax.swing.GroupLayout energyPanelLayout = new javax.swing.GroupLayout(energyPanel);
-        energyPanel.setLayout(energyPanelLayout);
-        energyPanelLayout.setHorizontalGroup(
-            energyPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(energyPanelLayout.createSequentialGroup()
-                .addGap(191, 191, 191)
-                .addComponent(jLabel9)
-                .addContainerGap(212, Short.MAX_VALUE))
-        );
-        energyPanelLayout.setVerticalGroup(
-            energyPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(energyPanelLayout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jLabel9)
-                .addContainerGap(227, Short.MAX_VALUE))
+                .addComponent(jLabel37)
+                .addGap(30, 30, 30)
+                .addGroup(temperaturePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel40)
+                    .addComponent(tempInput, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addGroup(temperaturePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel38)
+                    .addComponent(fromTemp, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addGroup(temperaturePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(toTemp, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel39))
+                .addGap(18, 18, 18)
+                .addComponent(convertTemp, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         jLabel2.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
@@ -636,29 +660,251 @@ public class MainPage extends javax.swing.JFrame {
                 .addContainerGap(43, Short.MAX_VALUE))
         );
 
+        jLabel6.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        jLabel6.setText("Force Converter");
+
+        jLabel41.setText("Convert From");
+
+        jLabel42.setText("Convert To");
+
+        fromForce.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "dyne", "Newton" }));
+        fromForce.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                fromForceActionPerformed(evt);
+            }
+        });
+
+        toForce.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "dyne", "Newton" }));
+
+        convertForce.setText("Convert");
+        convertForce.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                convertForceActionPerformed(evt);
+            }
+        });
+
+        jLabel43.setText("Enter the Force");
+
+        javax.swing.GroupLayout forcePanelLayout = new javax.swing.GroupLayout(forcePanel);
+        forcePanel.setLayout(forcePanelLayout);
+        forcePanelLayout.setHorizontalGroup(
+            forcePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(forcePanelLayout.createSequentialGroup()
+                .addGroup(forcePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(forcePanelLayout.createSequentialGroup()
+                        .addGap(194, 194, 194)
+                        .addComponent(jLabel6))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, forcePanelLayout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(convertForce, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(forcePanelLayout.createSequentialGroup()
+                        .addGap(100, 100, 100)
+                        .addGroup(forcePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addGroup(forcePanelLayout.createSequentialGroup()
+                                .addComponent(jLabel42)
+                                .addGap(112, 112, 112)
+                                .addComponent(toForce, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, forcePanelLayout.createSequentialGroup()
+                                .addGroup(forcePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(jLabel41)
+                                    .addComponent(jLabel43))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addGroup(forcePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                    .addComponent(fromForce, 0, 150, Short.MAX_VALUE)
+                                    .addComponent(forceInput))))))
+                .addContainerGap(125, Short.MAX_VALUE))
+        );
+        forcePanelLayout.setVerticalGroup(
+            forcePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(forcePanelLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jLabel6)
+                .addGap(30, 30, 30)
+                .addGroup(forcePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel43)
+                    .addComponent(forceInput, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addGroup(forcePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel41)
+                    .addComponent(fromForce, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addGroup(forcePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(toForce, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel42))
+                .addGap(18, 18, 18)
+                .addComponent(convertForce, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+
+        jLabel4.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        jLabel4.setText("Digital Storage Converter");
+
+        jLabel26.setText("Convert From");
+
+        jLabel27.setText("Convert To");
+
+        fromStorage.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Bit", "Byte" }));
+        fromStorage.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                fromStorageActionPerformed(evt);
+            }
+        });
+
+        toStorage.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Bit", "Byte", " " }));
+
+        convertStorage.setText("Convert");
+        convertStorage.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                convertStorageActionPerformed(evt);
+            }
+        });
+
+        jLabel28.setText("Enter the storage");
+
+        javax.swing.GroupLayout densityPanelLayout = new javax.swing.GroupLayout(densityPanel);
+        densityPanel.setLayout(densityPanelLayout);
+        densityPanelLayout.setHorizontalGroup(
+            densityPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(densityPanelLayout.createSequentialGroup()
+                .addGroup(densityPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(densityPanelLayout.createSequentialGroup()
+                        .addGap(194, 194, 194)
+                        .addComponent(jLabel4))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, densityPanelLayout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(convertStorage, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(densityPanelLayout.createSequentialGroup()
+                        .addGap(100, 100, 100)
+                        .addGroup(densityPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addGroup(densityPanelLayout.createSequentialGroup()
+                                .addComponent(jLabel27)
+                                .addGap(112, 112, 112)
+                                .addComponent(toStorage, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, densityPanelLayout.createSequentialGroup()
+                                .addGroup(densityPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(jLabel26)
+                                    .addComponent(jLabel28))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addGroup(densityPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                    .addComponent(fromStorage, 0, 150, Short.MAX_VALUE)
+                                    .addComponent(storageInput))))))
+                .addContainerGap(125, Short.MAX_VALUE))
+        );
+        densityPanelLayout.setVerticalGroup(
+            densityPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(densityPanelLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jLabel4)
+                .addGap(30, 30, 30)
+                .addGroup(densityPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel28)
+                    .addComponent(storageInput, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addGroup(densityPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel26)
+                    .addComponent(fromStorage, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addGroup(densityPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(toStorage, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel27))
+                .addGap(18, 18, 18)
+                .addComponent(convertStorage, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+
+        jLabel44.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        jLabel44.setText("Pressure Converter");
+
+        jLabel45.setText("Convert From");
+
+        jLabel46.setText("Convert To");
+
+        fromPressure.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Bar", "Pascal", "Torr" }));
+        fromPressure.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                fromPressureActionPerformed(evt);
+            }
+        });
+
+        toPressure.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Bar", "Pascal", "Torr" }));
+
+        convertPressure.setText("Convert");
+        convertPressure.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                convertPressureActionPerformed(evt);
+            }
+        });
+
+        jLabel47.setText("Enter the pressure");
+
+        javax.swing.GroupLayout energyPanelLayout = new javax.swing.GroupLayout(energyPanel);
+        energyPanel.setLayout(energyPanelLayout);
+        energyPanelLayout.setHorizontalGroup(
+            energyPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(energyPanelLayout.createSequentialGroup()
+                .addGroup(energyPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(energyPanelLayout.createSequentialGroup()
+                        .addGap(194, 194, 194)
+                        .addComponent(jLabel44))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, energyPanelLayout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(convertPressure, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(energyPanelLayout.createSequentialGroup()
+                        .addGap(100, 100, 100)
+                        .addGroup(energyPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addGroup(energyPanelLayout.createSequentialGroup()
+                                .addComponent(jLabel46)
+                                .addGap(112, 112, 112)
+                                .addComponent(toPressure, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, energyPanelLayout.createSequentialGroup()
+                                .addGroup(energyPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(jLabel45)
+                                    .addComponent(jLabel47))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addGroup(energyPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                    .addComponent(fromPressure, 0, 150, Short.MAX_VALUE)
+                                    .addComponent(pressureInput))))))
+                .addContainerGap(121, Short.MAX_VALUE))
+        );
+        energyPanelLayout.setVerticalGroup(
+            energyPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(energyPanelLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jLabel44)
+                .addGap(30, 30, 30)
+                .addGroup(energyPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel47)
+                    .addComponent(pressureInput, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addGroup(energyPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel45)
+                    .addComponent(fromPressure, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addGroup(energyPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(toPressure, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel46))
+                .addGap(18, 18, 18)
+                .addComponent(convertPressure, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+
         jLayeredPane1.setLayer(lengthPanel, javax.swing.JLayeredPane.DEFAULT_LAYER);
-        jLayeredPane1.setLayer(forcePanel, javax.swing.JLayeredPane.DEFAULT_LAYER);
         jLayeredPane1.setLayer(temperaturePanel, javax.swing.JLayeredPane.DEFAULT_LAYER);
-        jLayeredPane1.setLayer(densityPanel, javax.swing.JLayeredPane.DEFAULT_LAYER);
-        jLayeredPane1.setLayer(energyPanel, javax.swing.JLayeredPane.DEFAULT_LAYER);
         jLayeredPane1.setLayer(areaPanel, javax.swing.JLayeredPane.DEFAULT_LAYER);
         jLayeredPane1.setLayer(weightPanel, javax.swing.JLayeredPane.DEFAULT_LAYER);
         jLayeredPane1.setLayer(speedPanel, javax.swing.JLayeredPane.DEFAULT_LAYER);
         jLayeredPane1.setLayer(volumePanel, javax.swing.JLayeredPane.DEFAULT_LAYER);
+        jLayeredPane1.setLayer(forcePanel, javax.swing.JLayeredPane.DEFAULT_LAYER);
+        jLayeredPane1.setLayer(densityPanel, javax.swing.JLayeredPane.DEFAULT_LAYER);
+        jLayeredPane1.setLayer(energyPanel, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         javax.swing.GroupLayout jLayeredPane1Layout = new javax.swing.GroupLayout(jLayeredPane1);
         jLayeredPane1.setLayout(jLayeredPane1Layout);
         jLayeredPane1Layout.setHorizontalGroup(
             jLayeredPane1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(energyPanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addGap(0, 567, Short.MAX_VALUE)
             .addGroup(jLayeredPane1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addComponent(lengthPanel, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-            .addGroup(jLayeredPane1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addComponent(forcePanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-            .addGroup(jLayeredPane1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addComponent(temperaturePanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-            .addGroup(jLayeredPane1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addComponent(densityPanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addGroup(jLayeredPane1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addComponent(areaPanel, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addGroup(jLayeredPane1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -667,18 +913,32 @@ public class MainPage extends javax.swing.JFrame {
                 .addComponent(speedPanel, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addGroup(jLayeredPane1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addComponent(volumePanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addGroup(jLayeredPane1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(jLayeredPane1Layout.createSequentialGroup()
+                    .addContainerGap()
+                    .addComponent(temperaturePanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addContainerGap()))
+            .addGroup(jLayeredPane1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(jLayeredPane1Layout.createSequentialGroup()
+                    .addContainerGap()
+                    .addComponent(forcePanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addGap(16, 16, 16)))
+            .addGroup(jLayeredPane1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(jLayeredPane1Layout.createSequentialGroup()
+                    .addContainerGap()
+                    .addComponent(densityPanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addContainerGap()))
+            .addGroup(jLayeredPane1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(jLayeredPane1Layout.createSequentialGroup()
+                    .addGap(20, 20, 20)
+                    .addComponent(energyPanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addContainerGap()))
         );
         jLayeredPane1Layout.setVerticalGroup(
             jLayeredPane1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(energyPanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addGap(0, 396, Short.MAX_VALUE)
             .addGroup(jLayeredPane1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addComponent(lengthPanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-            .addGroup(jLayeredPane1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addComponent(forcePanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-            .addGroup(jLayeredPane1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addComponent(temperaturePanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-            .addGroup(jLayeredPane1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addComponent(densityPanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addGroup(jLayeredPane1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addComponent(areaPanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addGroup(jLayeredPane1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -687,6 +947,26 @@ public class MainPage extends javax.swing.JFrame {
                 .addComponent(speedPanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addGroup(jLayeredPane1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addComponent(volumePanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addGroup(jLayeredPane1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(jLayeredPane1Layout.createSequentialGroup()
+                    .addContainerGap()
+                    .addComponent(temperaturePanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addContainerGap()))
+            .addGroup(jLayeredPane1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(jLayeredPane1Layout.createSequentialGroup()
+                    .addContainerGap()
+                    .addComponent(forcePanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addGap(157, 157, 157)))
+            .addGroup(jLayeredPane1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(jLayeredPane1Layout.createSequentialGroup()
+                    .addGap(10, 10, 10)
+                    .addComponent(densityPanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addContainerGap()))
+            .addGroup(jLayeredPane1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(jLayeredPane1Layout.createSequentialGroup()
+                    .addGap(21, 21, 21)
+                    .addComponent(energyPanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addGap(1, 1, 1)))
         );
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
@@ -853,18 +1133,6 @@ public class MainPage extends javax.swing.JFrame {
         densityPanel.setVisible(false);
         energyPanel.setVisible(false);
     }//GEN-LAST:event_jButton5ActionPerformed
-
-    private void jButton8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton8ActionPerformed
-        lengthPanel.setVisible(false);
-        areaPanel.setVisible(false);
-        volumePanel.setVisible(false);
-        weightPanel.setVisible(false);
-        speedPanel.setVisible(false);
-        forcePanel.setVisible(false);
-        temperaturePanel.setVisible(false);
-        densityPanel.setVisible(true);
-        energyPanel.setVisible(false);
-    }//GEN-LAST:event_jButton8ActionPerformed
 
     private void jButton9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton9ActionPerformed
         lengthPanel.setVisible(false);
@@ -1432,6 +1700,148 @@ public class MainPage extends javax.swing.JFrame {
     catch(java.lang.NumberFormatException e){JOptionPane.showMessageDialog(this,"Only Numerical Input is Allowed");}
     }//GEN-LAST:event_convertVolumeActionPerformed
 
+    private void fromTempActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_fromTempActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_fromTempActionPerformed
+
+    private void convertTempActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_convertTempActionPerformed
+      // TODO add your handling code here:
+      
+    Double ConvertedTemp;
+    Double tempAmount = Double.parseDouble(tempInput.getText());
+    
+    //fahrenheit conversion
+    if(fromTemp.getSelectedItem().toString() == "Fahrenheit" && toTemp.getSelectedItem().toString() == "Celsius"){
+     ConvertedTemp = (tempAmount - 32 ) *5/9;
+     JOptionPane.showMessageDialog(this,"temperature in celsius is "+ ConvertedTemp.toString());
+    }
+    if(fromTemp.getSelectedItem().toString() == "Fahrenheit" && toTemp.getSelectedItem().toString() == "Kelvin"){
+     ConvertedTemp = (tempAmount - 32 ) *5/9 +273;
+     JOptionPane.showMessageDialog(this,"temperature in kelvin is "+ ConvertedTemp.toString());
+    }
+     
+    //Celsius conversion
+    if(fromTemp.getSelectedItem().toString() == "Celsius" && toTemp.getSelectedItem().toString() == "Fahrenheit"){
+     ConvertedTemp = (tempAmount * 9/5) + 32;
+     JOptionPane.showMessageDialog(this,"temperature in Fahrenheit is "+ ConvertedTemp.toString());
+    }
+    if(fromTemp.getSelectedItem().toString() == "Celsius" && toTemp.getSelectedItem().toString() == "Kelvin"){
+     ConvertedTemp = tempAmount + 273.15;
+     JOptionPane.showMessageDialog(this,"temperature in kelvin is "+ ConvertedTemp.toString());
+    }
+    
+    //Kelvin Conversion
+    if(fromTemp.getSelectedItem().toString() == "Kelvin" && toTemp.getSelectedItem().toString() == "Fahrenheit"){
+     ConvertedTemp = (tempAmount - 273.15) * 9/5 + 32;
+     JOptionPane.showMessageDialog(this,"temperature in Fahrenheit is "+ ConvertedTemp.toString());
+    }
+    if(fromTemp.getSelectedItem().toString() == "Kelvin" && toTemp.getSelectedItem().toString() == "Celsius"){
+     ConvertedTemp = tempAmount - 273.15 ;
+     JOptionPane.showMessageDialog(this,"temperature in celsius is "+ ConvertedTemp.toString());
+    }
+    
+    }//GEN-LAST:event_convertTempActionPerformed
+    
+    private void fromForceActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_fromForceActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_fromForceActionPerformed
+
+    private void convertForceActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_convertForceActionPerformed
+//        dyne Newton Kilogram-Force
+    Double ConvertedForce;
+    Double forceAmount = Double.parseDouble(forceInput.getText());
+    
+    //dyne conversion
+    if(fromForce.getSelectedItem().toString() == "dyne" && toForce.getSelectedItem().toString() == "Newton"){
+     ConvertedForce = forceAmount / 100000 ;
+     JOptionPane.showMessageDialog(this,"Force in newton is "+ ConvertedForce.toString());
+    }
+     
+    //Newton conversion
+    if(fromForce.getSelectedItem().toString() == "Newton" && toForce.getSelectedItem().toString() == "dyne"){
+     ConvertedForce = forceAmount * 100000 ;
+     JOptionPane.showMessageDialog(this,"Force in dyne is "+ ConvertedForce.toString());
+    }    
+
+
+    }//GEN-LAST:event_convertForceActionPerformed
+
+    private void fromStorageActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_fromStorageActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_fromStorageActionPerformed
+
+    private void convertStorageActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_convertStorageActionPerformed
+       
+    Double ConvertedStorage;
+    Double StorageAmount = Double.parseDouble(storageInput.getText());
+    
+    //Bit conversion
+    if(fromStorage.getSelectedItem().toString() == "Bit" && toStorage.getSelectedItem().toString() == "Byte"){
+     ConvertedStorage = StorageAmount / 8 ;
+     JOptionPane.showMessageDialog(this,"Storage in Byte is "+ ConvertedStorage.toString());
+    }
+     
+    //Byte conversion
+    if(fromStorage.getSelectedItem().toString() == "Byte" && toStorage.getSelectedItem().toString() == "Bit"){
+     ConvertedStorage = StorageAmount * 8 ;
+     JOptionPane.showMessageDialog(this,"Storage in Bit is "+ ConvertedStorage.toString());
+    }   
+    }//GEN-LAST:event_convertStorageActionPerformed
+
+    private void jButton8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton8ActionPerformed
+        lengthPanel.setVisible(false);
+        areaPanel.setVisible(false);
+        volumePanel.setVisible(false);
+        weightPanel.setVisible(false);
+        speedPanel.setVisible(false);
+        forcePanel.setVisible(false);
+        temperaturePanel.setVisible(false);
+        densityPanel.setVisible(true);
+        energyPanel.setVisible(false);
+    }//GEN-LAST:event_jButton8ActionPerformed
+
+    private void fromPressureActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_fromPressureActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_fromPressureActionPerformed
+
+    private void convertPressureActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_convertPressureActionPerformed
+        // TODO add your handling code here:
+    Double ConvertedPressure;
+    Double pressureAmount = Double.parseDouble(pressureInput.getText());
+    
+    //Bar conversion
+    if(fromPressure.getSelectedItem().toString() == "Bar" && toPressure.getSelectedItem().toString() == "Pascal"){
+     ConvertedPressure = pressureAmount * 100000;
+     JOptionPane.showMessageDialog(this,"Pressure in Pascal is "+ ConvertedPressure.toString());
+    }
+    if(fromPressure.getSelectedItem().toString() == "Bar" && toPressure.getSelectedItem().toString() == "Torr"){
+     ConvertedPressure = pressureAmount * 750;
+     JOptionPane.showMessageDialog(this,"Pressure in Torr is "+ ConvertedPressure.toString());
+    }   
+    
+    //Pascal conversion
+    if(fromPressure.getSelectedItem().toString() == "Pascal" && toPressure.getSelectedItem().toString() == "Bar"){
+     ConvertedPressure = pressureAmount/ 100000;
+     JOptionPane.showMessageDialog(this,"Pressure in Bar is "+ ConvertedPressure.toString());
+    }
+    if(fromPressure.getSelectedItem().toString() == "Pascal" && toPressure.getSelectedItem().toString() == "Torr"){
+     ConvertedPressure = pressureAmount / 133 ;
+     JOptionPane.showMessageDialog(this,"Pressure in torr is "+ ConvertedPressure.toString());
+    }
+    
+    //Torr conversion
+    if(fromPressure.getSelectedItem().toString() == "Torr" && toPressure.getSelectedItem().toString() == "Bar"){
+     ConvertedPressure = pressureAmount/ 750 ;
+     JOptionPane.showMessageDialog(this,"Pressure in Bar is "+ ConvertedPressure.toString());
+    }
+    if(fromPressure.getSelectedItem().toString() == "Torr" && toPressure.getSelectedItem().toString() == "Pascal"){
+     ConvertedPressure = pressureAmount * 133 ;
+     JOptionPane.showMessageDialog(this,"Pressure in pascal is "+ ConvertedPressure.toString());
+    }
+    
+    
+    }//GEN-LAST:event_convertPressureActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -1472,16 +1882,25 @@ public class MainPage extends javax.swing.JFrame {
     private javax.swing.JTextField areaInput;
     private javax.swing.JPanel areaPanel;
     private javax.swing.JButton convertArea;
+    private javax.swing.JButton convertForce;
     private javax.swing.JButton convertLength;
+    private javax.swing.JButton convertPressure;
     private javax.swing.JButton convertSpeed;
+    private javax.swing.JButton convertStorage;
+    private javax.swing.JButton convertTemp;
     private javax.swing.JButton convertVolume;
     private javax.swing.JButton convertWeight;
     private javax.swing.JPanel densityPanel;
     private javax.swing.JPanel energyPanel;
+    private javax.swing.JTextField forceInput;
     private javax.swing.JPanel forcePanel;
     private javax.swing.JComboBox<String> fromArea;
+    private javax.swing.JComboBox<String> fromForce;
     private javax.swing.JComboBox<String> fromLength;
+    private javax.swing.JComboBox<String> fromPressure;
     private javax.swing.JComboBox<String> fromSpeed;
+    private javax.swing.JComboBox<String> fromStorage;
+    private javax.swing.JComboBox<String> fromTemp;
     private javax.swing.JComboBox<String> fromVolume;
     private javax.swing.JComboBox<String> fromWeight;
     private javax.swing.JButton jButton1;
@@ -1511,22 +1930,41 @@ public class MainPage extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel23;
     private javax.swing.JLabel jLabel24;
     private javax.swing.JLabel jLabel25;
+    private javax.swing.JLabel jLabel26;
+    private javax.swing.JLabel jLabel27;
+    private javax.swing.JLabel jLabel28;
     private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel37;
+    private javax.swing.JLabel jLabel38;
+    private javax.swing.JLabel jLabel39;
+    private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel40;
+    private javax.swing.JLabel jLabel41;
+    private javax.swing.JLabel jLabel42;
+    private javax.swing.JLabel jLabel43;
+    private javax.swing.JLabel jLabel44;
+    private javax.swing.JLabel jLabel45;
+    private javax.swing.JLabel jLabel46;
+    private javax.swing.JLabel jLabel47;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
-    private javax.swing.JLabel jLabel7;
-    private javax.swing.JLabel jLabel8;
-    private javax.swing.JLabel jLabel9;
     private javax.swing.JLayeredPane jLayeredPane1;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JTextField lengthInput;
     private javax.swing.JPanel lengthPanel;
+    private javax.swing.JTextField pressureInput;
     private javax.swing.JTextField speedInput;
     private javax.swing.JPanel speedPanel;
+    private javax.swing.JTextField storageInput;
+    private javax.swing.JTextField tempInput;
     private javax.swing.JPanel temperaturePanel;
     private javax.swing.JComboBox<String> toArea;
+    private javax.swing.JComboBox<String> toForce;
     private javax.swing.JComboBox<String> toLength;
+    private javax.swing.JComboBox<String> toPressure;
     private javax.swing.JComboBox<String> toSpeed;
+    private javax.swing.JComboBox<String> toStorage;
+    private javax.swing.JComboBox<String> toTemp;
     private javax.swing.JComboBox<String> toVolume;
     private javax.swing.JComboBox<String> toWeight;
     private javax.swing.JTextField volumeInput;
